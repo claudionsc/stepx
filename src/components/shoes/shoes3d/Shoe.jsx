@@ -19,12 +19,11 @@ export function Shoe(props) {
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8)
-    ref.current.position.y = (0.5 + Math.cos(t / 2)) / 7
   })
 
   return (
-    <group {...props} dispose={null}>
-      <group position={[0, 2.95, 0]} rotation={[-Math.PI / 2, -0.44, -Math.PI / 2]} scale={0.12}>
+    <group ref={ref} {...props} dispose={null}>
+      <group position={[0, -5, 0]} rotation={[-Math.PI / 2, -0.44, -Math.PI / 2]} scale={0.12}>
         <mesh geometry={nodes.Shoe_Shoe_New2_0.geometry} material={materials.Shoe_New2} />
         <mesh geometry={nodes['Shoe_21_-_Default_0'].geometry} material={materials['21_-_Default']} />
       </group>

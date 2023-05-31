@@ -1,9 +1,12 @@
+import { Home } from "./components/pages/home/Home";
+import './styles/global.css'
 import { Shoes } from "./components/shoes/Shoes";
+
 
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
+      <Home />
     </div>
   );
 }
