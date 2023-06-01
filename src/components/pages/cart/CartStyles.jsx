@@ -7,4 +7,8 @@ export const CartContainer = styled.aside`
     position: fixed;
     top: 0;
     right: 0;
+    & svg {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 `

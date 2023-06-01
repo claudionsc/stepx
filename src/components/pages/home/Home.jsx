@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React , {useContext} from 'react'
 import { Navbar } from '../../navbar/Navbar'
-import { Cart } from '../cart/Cart'
+import CartContext from '../../contexts/CartContext';
+import { Cart } from '../cart/Cart';
 
 
 export const Home = () => {
 
-  const [cart, showCart] = useState(false)
+  const { cart, setCart } = useContext(CartContext);
 
   return (
     <div>
@@ -21,6 +22,8 @@ export const Home = () => {
       <section id='produtos'>
         <h1>Ver produtos</h1>
       </section>
+
+      {cart === true && <Cart /> }
       
     </div>
   )

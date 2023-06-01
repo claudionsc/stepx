@@ -12,7 +12,7 @@ export const NavDiv = styled.div`
     
 `
 
-export const NavIcon = styled.div`
+export const NavLogo = styled.div`
        width: 10%;
     height: 100%;
     background-color: red;
@@ -20,7 +20,24 @@ export const NavIcon = styled.div`
     text-align: center;
     display: grid;
     place-items: center;
+    cursor: pointer;
 
+    & svg {
+        font-size: 1.5rem;
+        
+    }
+`
+
+export const NavCart = styled.div`
+       width: 10%;
+    height: 100%;
+    background-color: red;
+    margin: 0 10px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    
     & svg {
         font-size: 1.5rem;
         

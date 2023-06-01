@@ -1,29 +1,34 @@
-import React from 'react'
-import { NavIcon, NavDiv, NavLogo, NavUl } from './NavStyles'
+import React, { useContext } from 'react'
+import { NavLogo, NavDiv, NavCart, NavUl } from './NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { TbShoe } from 'react-icons/tb'
+import CartContext from '../contexts/CartContext'
 
 export const Navbar = () => {
+
+  const { cart, setCart } = useContext(CartContext);
+
   return (
-    <NavDiv>
-      <NavIcon>
-        <a href="#"><TbShoe /></a>
-      </NavIcon>
-      <NavUl class="nav flex-row">
-        <li class="nav-item">
-          <a class="nav-link active" href="#lancamentos">Lançamentos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#vendidos">Mais vendidos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#produtos">Todos os produtos</a>
-        </li>
-        
-      </NavUl>
-      <NavIcon>
-        <a><AiOutlineShoppingCart /></a>
-      </NavIcon>
-    </NavDiv>
+      <NavDiv>
+        <NavLogo>
+          <a href="/"><TbShoe /></a>
+        </NavLogo>
+        <NavUl class="nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link active" href="#lancamentos">Lançamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#vendidos">Mais vendidos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#produtos">Todos os produtos</a>
+          </li>
+
+        </NavUl>
+        <NavCart onClick={() => setCart(true)} >
+          {console.log(cart)}
+          <a><AiOutlineShoppingCart /></a>
+        </NavCart>
+      </NavDiv>
   )
 }
