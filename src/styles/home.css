@@ -1,0 +1,74 @@
+
+.nav-item {
+    margin: 0 10px;
+}
+
+#main {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+section {
+    background-color: yellowgreen;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+}
+
+ #lancamentos {
+    background-color: goldenrod;
+
+}
+
+#vendidos {
+    background-color: yellowgreen;
+}
+
+.vendidos {
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
+    place-items: center;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+
+
+
+ #produtos {
+    background-color: green;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto !important;
+    padding-top: 8vh;
+}
+
+.filters {
+    background-color: rgb(60, 187, 255);
+    width: 30%;
+    height: 100%;
+}
+
+.products-items {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 70%;
+    place-items: center;
+    padding: 20px 0;
+   
+}

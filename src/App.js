@@ -3,6 +3,7 @@ import './styles/global.css'
 import { Shoes } from "./components/shoes/Shoes";
 import CartContext from "./components/contexts/CartContext";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 
 
@@ -12,9 +13,9 @@ function App() {
 
   return (
     <CartContext.Provider value={{ cart, setCart }}>
-    <div className="App">
-      <Home />
-    </div>
+      <div className="App">
+        <Outlet />
+      </div>
     </CartContext.Provider>
   );
 }

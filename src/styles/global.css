@@ -24,29 +24,3 @@ a {
     color: rgb(34, 34, 34);
     text-decoration: none;
 }
-
-.nav-item {
-    margin: 0 10px;
-}
-
-section {
-    background-color: yellowgreen;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
- #lancamentos {
-    background-color: goldenrod;
-
-}
- #vendidos {
-    background-color: yellowgreen;
-
-}
- #produtos {
-    background-color: green;
-
-}
