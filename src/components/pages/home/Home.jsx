@@ -5,7 +5,8 @@ import { Cart } from '../cart/Cart';
 import { ProductsHome } from './sections/ProductsHome/ProductsHome';
 import '../../../styles/home.css'
 import { MaisVendidos } from './sections/mais-vendidos/MaisVendidos';
-import Slide  from '../../Slide/Slide';
+import Slide from '../../Slide/Slide';
+import { Link } from 'react-router-dom';
 
 
 export const Home = () => {
@@ -36,8 +37,10 @@ export const Home = () => {
           <h1>Filtros</h1>
         </aside>
         <main className='products-items'>
+          <Link to={'/product'}>
+            <ProductsHome nome={'produto01'} preço={'R$ 0,0'} />
+          </Link>
           <ProductsHome nome={'produto02'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto01'} preço={'R$ 0,0'} />
           <ProductsHome nome={'produto03'} preço={'R$ 0,0'} />
           <ProductsHome nome={'produto04'} preço={'R$ 0,0'} />
           <ProductsHome nome={'produto05'} preço={'R$ 0,0'} />
