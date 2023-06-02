@@ -5,6 +5,7 @@ import { Cart } from '../cart/Cart';
 import { ProductsHome } from './sections/ProductsHome/ProductsHome';
 import '../../../styles/home.css'
 import { MaisVendidos } from './sections/mais-vendidos/MaisVendidos';
+import Slide  from '../../Slide/Slide';
 
 
 export const Home = () => {
@@ -14,16 +15,19 @@ export const Home = () => {
   return (
     <main id='main'>
       <Navbar />
-      <section id='lancamentos'>
+
+      <section id='lancamentos' >
         <h1>Lançamentos</h1>
+        <Slide />
       </section>
 
       <section id='vendidos'>
+        <h3>Mais vendidos</h3>
         <main className='vendidos'>
-
-          <MaisVendidos nome={'lançamento01'} />
-          <MaisVendidos nome={'lançamento02'} />
-          <MaisVendidos nome={'lançamento03'} />
+          <MaisVendidos nome={'maisvendidos01'} />
+          <MaisVendidos nome={'maisvendidos02'} />
+          <MaisVendidos nome={'maisvendidos03'} />
+          <MaisVendidos nome={'maisvendidos03'} />
         </main>
       </section>
 
