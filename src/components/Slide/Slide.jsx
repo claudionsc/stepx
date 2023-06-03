@@ -4,6 +4,7 @@ import Carousel, { consts } from 'react-elastic-carousel'
 import { MdArrowBackIosNew } from 'react-icons/md'
 import { MdArrowForwardIos } from 'react-icons/md'
 
+
 const Slide = () => {
 
   const breakpoints = [

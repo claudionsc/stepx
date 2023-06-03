@@ -1,6 +1,5 @@
 import { Home } from "./components/pages/home/Home";
 import './styles/global.css'
-import { Shoes } from "./components/shoes/Shoes";
 import CartContext from "./components/contexts/CartContext";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
