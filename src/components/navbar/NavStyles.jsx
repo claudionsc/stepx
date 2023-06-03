@@ -32,12 +32,32 @@ export const NavLogo = styled.div`
 export const NavCart = styled.div`
     width: 10%;
     height: 100%;
-    background-color: red;
     margin: 0 10px;
     text-align: center;
     display: grid;
     place-items: center;
     cursor: pointer;
+
+    .cartQtd{
+        width: 10vw;
+        height: auto;
+        ::after {
+            content: attr(count);
+            position: absolute;
+            right: 4.2%;
+            top: 15%;
+            padding: 2px 5px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            color: white;
+            font-size: .7rem;
+            max-width: 30px;
+            max-height: 30px;
+            text-decoration: none;
+         }
+    }
+
+
     
     & svg {
         font-size: 1.5rem !important;

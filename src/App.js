@@ -1,6 +1,6 @@
 import { Home } from "./components/pages/home/Home";
 import './styles/global.css'
-import CartContext from "./components/contexts/CartContext";
+import CartAsideContext from "./components/contexts/CartAsideContext";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
@@ -14,11 +14,11 @@ function App() {
 
   return (
     <Provider store={store}>
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartAsideContext.Provider value={{ cart, setCart }}>
         <div className="App">
           <Outlet />
         </div>
-      </CartContext.Provider>
+      </CartAsideContext.Provider>
     </Provider>
   );
 }

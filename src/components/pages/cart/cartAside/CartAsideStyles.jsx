@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CartContainer = styled.aside`
+export const CartAsideContainer = styled.aside`
     height: 100vh;
     width: 20vw;
     background-color: aquamarine;
@@ -65,7 +65,7 @@ export const CartContainer = styled.aside`
     }
 `
 
-export const StyleCartItems =  styled.div`
+export const StyleCartAsideItems =  styled.div`
     background-color: cornflowerblue;
     height: 150px;
     width: 100%;

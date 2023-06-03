@@ -1,16 +1,17 @@
 import React from 'react'
-import { StyleCartItems } from './CartStyles'
+import { StyleCartAsideItems } from './CartAsideStyles'
 
-export const CartItems = (props) => {
+export const CartAsideItems = (props) => {
     return (
-        <StyleCartItems key={props.key} >
+        <StyleCartAsideItems key={props.key} >
             <img src={props.img} />
 
             <div>
                 <h6>{props.title}</h6>
                 <p>{props.desc}</p>
                 <p>{props.price}</p>
+                <p>{props.priceParcel}</p>
             </div>
-        </StyleCartItems>
+        </StyleCartAsideItems>
     )
 }

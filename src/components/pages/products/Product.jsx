@@ -7,14 +7,14 @@ import { isDisabled } from '@testing-library/user-event/dist/utils'
 import { Button } from '../../Button/Button'
 import { NavCart } from '../../navbar/NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import CartContext from '../../contexts/CartContext'
-import { Cart } from '../cart/Cart'
+import CartAsideContext from '../../contexts/CartAsideContext'
+import { CartAside } from '../cart/cartAside/CartAside'
 import AF01 from '../../assets/img/NikeAF01/af01.avif'
 
 
 export const Product = () => {
 
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartAsideContext);
 
 
   return (
@@ -52,7 +52,7 @@ export const Product = () => {
         </span>
       </section>
 
-      {cart === true && <Cart />}
+      {cart === true && <CartAside />}
     </PDStyle>
   )
 }

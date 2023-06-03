@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Navbar } from '../../navbar/Navbar'
-import CartContext from '../../contexts/CartContext';
-import { Cart } from '../cart/Cart';
+import CartContext from '../../contexts/CartAsideContext';
+import { CartAside } from '../cart/cartAside/CartAside';
 import '../../../styles/home.css'
 import { MaisVendidos } from './sections/mais-vendidos/MaisVendidos';
 import Slide from '../../Slide/Slide';
@@ -51,7 +51,7 @@ export const Home = () => {
             key={item.key} 
             id={item.id} 
             nome={item.nome} 
-            preco={item.preco} 
+            preco={`R$ ${item.preco}`} 
             img={item.img} 
             onClick={() => handleAddCart(item)} 
             addcart={"Adicionar ao carrinho"}/>
@@ -62,7 +62,7 @@ export const Home = () => {
         </main>
       </section>
 
-      {cart === true && <Cart />}
+      {cart === true && <CartAside />}
 
     </main>
   )

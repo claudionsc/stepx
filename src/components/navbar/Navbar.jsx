@@ -1,12 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { NavLogo, NavDiv, NavCart, NavUl } from './NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { TbShoe } from 'react-icons/tb'
-import CartContext from '../contexts/CartContext'
+import CartContext from '../contexts/CartAsideContext'
+import { useSelect } from '@react-three/drei'
+import { useDispatch } from 'react-redux'
+import { getTotals } from '../../store'
 
 export const Navbar = () => {
 
   const { cart, setCart } = useContext(CartContext);
+
+  const cartQtd = localStorage.getItem('cartTotal')
+  const cartItems = useSelect((state) => state.frutas)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getTotals())
+  }, [cartItems, dispatch])
+
+
 
   return (
       <NavDiv>
@@ -26,7 +39,7 @@ export const Navbar = () => {
 
         </NavUl>
         <NavCart onClick={() => setCart(true)} >
-          <a><AiOutlineShoppingCart /></a>
+          <a className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
         </NavCart>
       </NavDiv>
   )
