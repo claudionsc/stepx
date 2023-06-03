@@ -6,8 +6,8 @@ import { ProductsHome } from './sections/ProductsHome/ProductsHome';
 import '../../../styles/home.css'
 import { MaisVendidos } from './sections/mais-vendidos/MaisVendidos';
 import Slide from '../../Slide/Slide';
-import { Link } from 'react-router-dom';
-
+import TestImg from '../../assets/img/teste.webp'
+import { HomeFilters } from '../../HomeFilters/HomeFilters';
 
 export const Home = () => {
 
@@ -33,13 +33,9 @@ export const Home = () => {
       </section>
 
       <section id='produtos'>
-        <aside className='filters'>
-          <h1>Filtros</h1>
-        </aside>
+        <HomeFilters />
         <main className='products-items'>
-          <Link to={'/product'}>
-            <ProductsHome nome={'produto01'} preço={'R$ 0,0'} />
-          </Link>
+          <ProductsHome nome={'produto01'} preço={'R$ 0,0'} img={TestImg} />
           <ProductsHome nome={'produto02'} preço={'R$ 0,0'} />
           <ProductsHome nome={'produto03'} preço={'R$ 0,0'} />
           <ProductsHome nome={'produto04'} preço={'R$ 0,0'} />

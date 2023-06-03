@@ -14,7 +14,7 @@ export const NavDiv = styled.div`
 `
 
 export const NavLogo = styled.div`
-       width: 10%;
+    width: 10%;
     height: 100%;
     background-color: red;
     margin: 0 10px;
@@ -30,7 +30,7 @@ export const NavLogo = styled.div`
 `
 
 export const NavCart = styled.div`
-       width: 10%;
+    width: 10%;
     height: 100%;
     background-color: red;
     margin: 0 10px;
@@ -40,7 +40,7 @@ export const NavCart = styled.div`
     cursor: pointer;
     
     & svg {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
         
     }
 `

@@ -75,6 +75,8 @@ export const PDStyle = styled.main`
         top: 0;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        z-index: 1;
         
         
         & a {
@@ -95,7 +97,6 @@ export const PDStyle = styled.main`
             background-color: red;
             width: 40%;
             height: 40%;
-        }
-       
+        }       
     }
 `

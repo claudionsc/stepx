@@ -26,7 +26,6 @@ export const Navbar = () => {
 
         </NavUl>
         <NavCart onClick={() => setCart(true)} >
-          {console.log(cart)}
           <a><AiOutlineShoppingCart /></a>
         </NavCart>
       </NavDiv>

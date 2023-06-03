@@ -5,7 +5,7 @@ import CartContext from '../../contexts/CartContext'
 import { CartItems } from './CartItems'
 
 
-export const Cart = () => {
+export const Cart = (props) => {
 
   const { cart, setCart } = useContext(CartContext);
 

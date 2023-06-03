@@ -11,9 +11,9 @@ export const MVStyled = styled.span`
         background-color: black;
         color: white;
         padding: 10px 40px;
-        border-radius: 118px 117px 117px 117px;
--webkit-border-radius: 118px 117px 117px 117px;
--moz-border-radius: 118px 117px 117px 117px;
+        border-radius: 117px 117px 117px 117px;
+        -webkit-border-radius: 118px 117px 117px 117px;
+        -moz-border-radius: 118px 117px 117px 117px;
         height: 20px;
         font-size: .8rem;
         position: relative;
