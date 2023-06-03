@@ -1,17 +1,28 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Navbar } from '../../navbar/Navbar'
 import CartContext from '../../contexts/CartContext';
 import { Cart } from '../cart/Cart';
-import { ProductsHome } from './sections/ProductsHome/ProductsHome';
 import '../../../styles/home.css'
 import { MaisVendidos } from './sections/mais-vendidos/MaisVendidos';
 import Slide from '../../Slide/Slide';
-import TestImg from '../../assets/img/teste.webp'
+import { List } from './sections/ProductsHome/LoadProductsHome';
 import { HomeFilters } from '../../HomeFilters/HomeFilters';
+import {ProductsHome } from './sections/ProductsHome/ProductsHome'
+import { Button } from '../../Button/Button';
+import { useDispatch } from 'react-redux';
 
 export const Home = () => {
 
+  const [items, setItems] = useState(List)
+
   const { cart, setCart } = useContext(CartContext);
+
+  const dispatch = useDispatch()
+
+  const handleAddCart = (item) => {
+    // dispatch(showItems(props.id, props.nome, props.preco, props.img))
+    console.log(item)
+  }
 
   return (
     <main id='main'>
@@ -35,21 +46,15 @@ export const Home = () => {
       <section id='produtos'>
         <HomeFilters />
         <main className='products-items'>
-          <ProductsHome nome={'produto01'} preço={'R$ 0,0'} img={TestImg} />
-          <ProductsHome nome={'produto02'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto03'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto04'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto05'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto06'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto07'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto08'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto09'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto10'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto11'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto12'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto13'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto14'} preço={'R$ 0,0'} />
-          <ProductsHome nome={'produto15'} preço={'R$ 0,0'} />
+          
+          {items.map(item => {
+            return <ProductsHome key={item.key} id={item.id} nome={item.nome} preco={item.preco} img={item.img} onClick={() => handleAddCart(item)} addcart={"Adicionar ao carrinho"}/>
+              
+            
+          }
+
+          )}
+          
         </main>
       </section>
 
