@@ -1,14 +1,15 @@
 import React from 'react'
 import { StyleCartItems } from './CartStyles'
 
-export const CartItems = () => {
+export const CartItems = (props) => {
     return (
-        <StyleCartItems>
-            <img src='' />
+        <StyleCartItems key={props.key} >
+            <img src={props.img} />
 
             <div>
-                <h6>Título</h6>
-                <p>Lorem ipsum dolor, sit amet consectetur </p>
+                <h6>{props.title}</h6>
+                <p>{props.desc}</p>
+                <p>{props.price}</p>
             </div>
         </StyleCartItems>
     )

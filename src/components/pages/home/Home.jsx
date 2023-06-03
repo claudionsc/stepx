@@ -8,7 +8,7 @@ import Slide from '../../Slide/Slide';
 import { List } from './sections/ProductsHome/LoadProductsHome';
 import { HomeFilters } from '../../HomeFilters/HomeFilters';
 import {ProductsHome } from './sections/ProductsHome/ProductsHome'
-import { Button } from '../../Button/Button';
+import { showItems } from '../../../store';
 import { useDispatch } from 'react-redux';
 
 export const Home = () => {
@@ -20,8 +20,7 @@ export const Home = () => {
   const dispatch = useDispatch()
 
   const handleAddCart = (item) => {
-    // dispatch(showItems(props.id, props.nome, props.preco, props.img))
-    console.log(item)
+    dispatch(showItems(item))
   }
 
   return (
@@ -48,9 +47,14 @@ export const Home = () => {
         <main className='products-items'>
           
           {items.map(item => {
-            return <ProductsHome key={item.key} id={item.id} nome={item.nome} preco={item.preco} img={item.img} onClick={() => handleAddCart(item)} addcart={"Adicionar ao carrinho"}/>
-              
-            
+            return <ProductsHome 
+            key={item.key} 
+            id={item.id} 
+            nome={item.nome} 
+            preco={item.preco} 
+            img={item.img} 
+            onClick={() => handleAddCart(item)} 
+            addcart={"Adicionar ao carrinho"}/>
           }
 
           )}

@@ -13,6 +13,41 @@ export const CartContainer = styled.aside`
         height: 100%;
         background-color: palevioletred;
         overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+         .carrinho-vazio {
+        
+        height: 20%;
+        display: grid;
+        place-items: center;
+        background-color: yellow;
+        margin: 50% 0;
+
+        p {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        
+    }
+
+
+        & .cart-summary{
+        background-color: red;
+        width: 100%;
+        height: 8%;
+        position: absolute;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+       
+
+        button {
+            height: 50%;
+        }
+    }
     }
 
     & svg {
@@ -32,7 +67,7 @@ export const CartContainer = styled.aside`
 
 export const StyleCartItems =  styled.div`
     background-color: cornflowerblue;
-    height: 20%;
+    height: 150px;
     width: 100%;
     margin: 10px 0;
     display: flex;
@@ -40,9 +75,9 @@ export const StyleCartItems =  styled.div`
     padding: 0 10px;
 
     & img {
-        background-color: red;
-        width: 20%;
-        height: 40%;
+        width: 30%;
+        aspect-ratio: 1/1;
+        
     }
 
     & div {
@@ -52,4 +87,7 @@ export const StyleCartItems =  styled.div`
     & div p {
         font-size: .8rem;
     }
+
+    
+    
 `

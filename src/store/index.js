@@ -33,6 +33,15 @@ const ItemReducers = createReducer(INITIAL_STATE, {
     
   },
 
+  [removeItems]: (state, action) => {
+    const nextCartItem = state.cartItems.filter(
+        cartItem => cartItem.id !== action.payload.id
+    )
+    state.cartItems = nextCartItem
+    localStorage.setItem('cartItems', JSON.stringify(state.cartItems))
+
+},
+
   [decreaseCart]: (state, action) => {
     const itemIndex = state.cartItems.findIndex(
       cartItems => cartItems.id === action.payload.id
@@ -51,8 +60,8 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
   [cleanCart]: (state, action) => {
     state.cartItems = []
-    state.cartTotal = 0
-    localStorage.setItem('cartitems', JSON.stringify(state.cartItems))
+    
+    localStorage.setItem('cartItems', JSON.stringify(state.cartItems))
   },
 
   [getTotals]: (state, action)  => {
@@ -76,6 +85,7 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
 const loggerMiddleware = store => next => action => {
   next(action)
+  console.log(action.payload)
 }
 
 // const confirmMiddleware = store => next => action => {

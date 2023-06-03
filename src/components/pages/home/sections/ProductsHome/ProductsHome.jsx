@@ -6,9 +6,6 @@ import { useDispatch } from 'react-redux';
 import { showItems } from '../../../../../store/index';
 
 export const ProductsHome = (props) => {
-
-
-
     
     return (
         <PHStyled key={props.key} id={props.id}>
@@ -18,7 +15,7 @@ export const ProductsHome = (props) => {
 
             <div className="desc-product-home">
                 <h5>{props.nome}</h5>
-                <p>{props.preço}</p>
+                <p>{props.preco}</p>
                 <Button onClick={props.onClick} addcart={props.addcart}/>
             </div>
         </PHStyled>
