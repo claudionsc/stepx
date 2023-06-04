@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
@@ -10,7 +10,11 @@ import { Product } from './components/pages/products/Product';
 import { Home } from './components/pages/home/Home';
 import { CartWide } from './components/pages/cart/cartWide/CartWide';
 
+
+const product = JSON.parse(localStorage.getItem('product'))
+
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <App />,
@@ -20,7 +24,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/product",
+        path: `/${product.key}`,
         element: <Product />
       },
       {

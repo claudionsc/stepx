@@ -1,9 +1,12 @@
 import TestImg from '../../../../assets/img/teste.webp'
 import NB01 from '../../../../assets/img/NewBalance550/NB01.webp'
+import NB02 from '../../../../assets/img/NewBalance550/NB02.webp'
+import NB03 from '../../../../assets/img/NewBalance550/NB03.webp'
+import NB04 from '../../../../assets/img/NewBalance550/NB04.webp'
 
 
 export const List = [
-            {key:'tenis NB', id:1, nome:'Tênis New Balance 550 Masculino', preco: 999.99, img: NB01 },
+            {key:'tenis-NB', id:1, nome:'Tênis New Balance 550 Masculino', preco: 999.99, img: {img01:NB01, img02: NB02, img03: NB03, img04: NB04} },
              {key:'produto02', id:2 ,nome:'produto02', preco: 299.99,  img: TestImg },
              {key:'produto03', id:3 ,nome:'produto03', preco:'0',  img: TestImg },
              {key:'produto04', id:4 ,nome:'produto04', preco:'0',  img: TestImg },

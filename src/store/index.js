@@ -6,7 +6,11 @@ const INITIAL_STATE = {
   cartSubtotal: 0
 }
 
-// ACTIONS 
+const PRODUCTS_STATE = {
+  product: localStorage.getItem("product") ? JSON.parse(localStorage.getItem("product")) : []
+}
+
+// ACTIONS CART
 
 export const showItems = createAction('showItems')
 export const addQtd = createAction('addQtd')
@@ -16,6 +20,12 @@ export const decreaseCart = createAction('decreaseCart')
 export const getTotals = createAction('getTotals')
 export const getSubtotal = createAction('getSubTotal')
 
+// ACTIONS PRODUCTS
+
+export const showProducts = createAction('showProducts')
+
+
+// CART REDUCERS
 const ItemReducers = createReducer(INITIAL_STATE, {
   [showItems]: (state, action) => {
 
@@ -103,6 +113,16 @@ const ItemReducers = createReducer(INITIAL_STATE, {
   
 })
 
+// PRODUCTS REDUCERS
+
+const ProductReducers = createReducer(PRODUCTS_STATE, {
+  [showProducts]: (state, action) => {
+    const products = action.payload
+    state.product = products
+
+    localStorage.setItem("product", JSON.stringify(state.product))
+  }
+})
 
 const loggerMiddleware = store => next => action => {
   next(action)
@@ -119,7 +139,8 @@ const loggerMiddleware = store => next => action => {
 
 export default configureStore({
   reducer: {
-      item: ItemReducers
+      item: ItemReducers,
+      product: ProductReducers
   },
   middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(loggerMiddleware)

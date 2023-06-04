@@ -8,8 +8,8 @@ import { showItems } from '../../../../../store/index';
 export const ProductsHome = (props) => {
     
     return (
-        <PHStyled key={props.key} id={props.id}>
-            <Link to={'/product'}>
+        <PHStyled key={props.key} id={props.id} onClick={props.verPag}  >
+            <Link to={props.link} >
                 <img src={props.img} className='img' />
             </Link>
 

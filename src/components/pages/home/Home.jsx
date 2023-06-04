@@ -8,7 +8,7 @@ import Slide from '../../Slide/Slide';
 import { List } from './sections/ProductsHome/LoadProductsHome';
 import { HomeFilters } from '../../HomeFilters/HomeFilters';
 import {ProductsHome } from './sections/ProductsHome/ProductsHome'
-import { showItems } from '../../../store';
+import { showItems, showProducts } from '../../../store';
 import { useDispatch } from 'react-redux';
 
 export const Home = () => {
@@ -20,7 +20,12 @@ export const Home = () => {
   const dispatch = useDispatch()
 
   const handleAddCart = (item) => {
+    
     dispatch(showItems(item))
+  }
+
+  const seePag = (item) => {
+    dispatch(showProducts(item))
   }
 
   return (
@@ -52,8 +57,10 @@ export const Home = () => {
             id={item.id} 
             nome={item.nome} 
             preco={`R$ ${item.preco}`} 
-            img={item.img} 
+            img={item.img.img01} 
+            link={item.key}
             onClick={() => handleAddCart(item)} 
+            verPag={() => seePag(item)}
             addcart={"Adicionar ao carrinho"}/>
           }
 
