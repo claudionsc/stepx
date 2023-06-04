@@ -15,6 +15,7 @@ border: 1px solid black;
     height: 100%;
     border: none;
     background-color: transparent;
+    cursor: pointer;
  }
 
  & label{

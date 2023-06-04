@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Item from './Item'
+import StyleSlide from './StyleSlide'
 import Carousel, { consts } from 'react-elastic-carousel'
 import { MdArrowBackIosNew } from 'react-icons/md'
 import { MdArrowForwardIos } from 'react-icons/md'
@@ -31,7 +31,7 @@ const Slide = () => {
         }}
         >
           {items.map((item) => (
-            <Item key={item}>{item}</Item>
+            <StyleSlide key={item}>{item}</StyleSlide>
           ))}
         </Carousel>
       </div>

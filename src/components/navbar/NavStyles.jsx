@@ -65,7 +65,40 @@ export const NavCart = styled.div`
     }
 `
 
+export const NALTStyle = styled.nav`
+     
+        background-color: black;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        
+        
+        & a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 2%;
+           
+        }
+        
+        & p, svg {
+            color: white;
+            font-size: .7rem;
+            padding: 2px;
+        }
 
+        & .tamanhos{
+            background-color: red;
+            width: 40%;
+            height: 40%;
+        }       
+    
+`
 export const NavUl = styled.ul`
 
     list-style: none;

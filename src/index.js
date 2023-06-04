@@ -8,6 +8,7 @@ import {
 import App from './App';
 import { Product } from './components/pages/products/Product';
 import { Home } from './components/pages/home/Home';
+import { CartWide } from './components/pages/cart/cartWide/CartWide';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <Product />
+      },
+      {
+        path: "/cart",
+        element: <CartWide />
+      },
+      {
+        path: "/login",
+        element: <CartWide />
       },
       
     ]

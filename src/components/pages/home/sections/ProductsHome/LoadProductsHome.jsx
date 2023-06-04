@@ -4,7 +4,7 @@ import NB01 from '../../../../assets/img/NewBalance550/NB01.webp'
 
 export const List = [
             {key:'tenis NB', id:1, nome:'Tênis New Balance 550 Masculino', preco: 999.99, img: NB01 },
-             {key:'produto02', id:2 ,nome:'produto02', preco:'0',  img: TestImg },
+             {key:'produto02', id:2 ,nome:'produto02', preco: 299.99,  img: TestImg },
              {key:'produto03', id:3 ,nome:'produto03', preco:'0',  img: TestImg },
              {key:'produto04', id:4 ,nome:'produto04', preco:'0',  img: TestImg },
              {key:'produto05', id:5 ,nome:'produto05', preco:'0',  img: TestImg },

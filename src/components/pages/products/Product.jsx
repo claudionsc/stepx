@@ -10,6 +10,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import CartAsideContext from '../../contexts/CartAsideContext'
 import { CartAside } from '../cart/cartAside/CartAside'
 import AF01 from '../../assets/img/NikeAF01/af01.avif'
+import { NavbarAlt } from '../../navbar/NavbarAlt'
 
 
 export const Product = () => {
@@ -19,16 +20,11 @@ export const Product = () => {
 
   return (
     <PDStyle>
-      <nav className='nav-product'>
-        <Link to={'/'}>
-          <MdArrowBackIosNew />
-          <p>Voltar pra home</p>
-        </Link>
-
-        <NavCart onClick={() => setCart(true)} >
-          <a><AiOutlineShoppingCart /></a>
-        </NavCart>
-      </nav>
+     <NavbarAlt cart={
+     <NavCart onClick={() => setCart(true)} >
+      <a><AiOutlineShoppingCart /></a>
+    </NavCart>
+  } />
 
       <section id='product'>
         <span className='product-img'>

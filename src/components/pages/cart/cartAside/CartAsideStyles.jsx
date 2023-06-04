@@ -9,6 +9,34 @@ export const CartAsideContainer = styled.aside`
     right: 0;
     z-index: 1;
 
+    .open-wide-cart{
+        position: fixed;
+        width: 2vw;
+        height: 5vh;
+        top: 50%;
+        right: 19%;
+        border-radius: 50%;
+        z-index: 0;
+
+        :hover {
+            ::before{
+                content: 'Ver carrinho completo';
+                background-color: black;
+                color: white;
+                width: 6vw;
+                padding: 2px;
+                position: absolute;
+                font-size: 0.5rem;
+                right: 18%;
+                text-align: center;
+            }
+        }
+
+        & svg{
+            font-size: .9rem;
+        }
+    }
+
     & .cart-items-div {
         height: 100%;
         background-color: palevioletred;
@@ -16,22 +44,23 @@ export const CartAsideContainer = styled.aside`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+       
+    
 
          .carrinho-vazio {
-        
-        height: 20%;
-        display: grid;
-        place-items: center;
-        background-color: yellow;
-        margin: 50% 0;
+            height: 20%;
+            display: grid;
+            place-items: center;
+            background-color: yellow;
+            margin: 50% 0;
 
-        p {
-            text-decoration: underline;
-            cursor: pointer;
+            p {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            
         }
-
-        
-    }
 
 
         & .cart-summary{
@@ -55,6 +84,7 @@ export const CartAsideContainer = styled.aside`
         cursor: pointer;
         position: absolute;
         z-index: 1;
+        margin: 10px 0;
        
     }
 
@@ -73,6 +103,7 @@ export const StyleCartAsideItems =  styled.div`
     display: flex;
     align-items: center;
     padding: 0 10px;
+    z-index: 1;
 
     & img {
         width: 30%;

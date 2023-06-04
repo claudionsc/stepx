@@ -2,7 +2,8 @@ import {  configureStore, createAction, createReducer } from '@reduxjs/toolkit'
 
 const INITIAL_STATE = {
   cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem('cartItems')) : [],
-  cartTotal: 0
+  cartTotal: 0,
+  cartSubtotal: 0
 }
 
 // ACTIONS 
@@ -13,6 +14,7 @@ export const removeItems = createAction('removeItems')
 export const cleanCart = createAction('cleanCart')
 export const decreaseCart = createAction('decreaseCart')
 export const getTotals = createAction('getTotals')
+export const getSubtotal = createAction('getSubTotal')
 
 const ItemReducers = createReducer(INITIAL_STATE, {
   [showItems]: (state, action) => {
@@ -78,6 +80,25 @@ const ItemReducers = createReducer(INITIAL_STATE, {
     );
     state.cartTotal = qtd
     localStorage.setItem('cartTotal', JSON.stringify(state.cartTotal))
+  }, 
+
+  [getSubtotal]: (state, action) => {
+    let {total, quantity}= state.cartItems.reduce(
+      (cartTotal, cartItem) => {
+      const { preco, cartQtd } = cartItem;
+      const itemTotal = preco * cartQtd;
+
+      cartTotal.total += itemTotal
+      cartTotal.quantity += cartQtd
+
+      return cartTotal;
+    }, {
+        total: 0,
+        quantity: 0
+    })
+
+    state.cartTotal = quantity;
+    state.cartSubtotal = total;
   }
   
 })
@@ -85,7 +106,6 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
 const loggerMiddleware = store => next => action => {
   next(action)
-  console.log(action.payload)
 }
 
 // const confirmMiddleware = store => next => action => {
