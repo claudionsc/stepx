@@ -56,7 +56,11 @@ export const Product = () => {
             <p> </p>
             <p>{`R$ ${product.preco}`}</p>
 
-           <Tamanhos disable34={isDisabled} />
+           <Tamanhos >
+            {product.tamanhos.map(item => {
+              return <input type="button" value={item[item]} className="tamanhos-btn" />
+            })}
+           </Tamanhos>
            <Button onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
           </div>
 

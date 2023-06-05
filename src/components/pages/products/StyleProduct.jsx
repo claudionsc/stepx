@@ -17,13 +17,15 @@ export const PDStyle = styled.main`
             place-items: center;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 0px;
+            grid-column-gap: 5px;
             grid-row-gap: 5px;
             width: 50vw;
+            margin-right: 20px;
 
                 & img {
-                height: 45vh;
+                width: 100%;
                 aspect-ratio: 1/1;
+                object-fit: contain;
             }
             
         }

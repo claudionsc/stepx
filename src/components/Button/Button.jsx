@@ -3,8 +3,8 @@ import { BTNStyled } from './StyleButton'
 
 export const Button = (props) => {
   return (
-    <BTNStyled onClick={props.onClick}>
-      {props.addcart}
+    <BTNStyled className={props.className} onClick={props.onClick}>
+      <p>{props.addcart}</p>
     </BTNStyled>
   )
 }

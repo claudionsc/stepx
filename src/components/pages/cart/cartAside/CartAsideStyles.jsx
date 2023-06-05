@@ -52,6 +52,8 @@ export const CartAsideContainer = styled.aside`
             place-items: center;
             margin: 50% 0;
 
+
+
             p {
                 text-decoration: underline;
                 cursor: pointer;
@@ -64,7 +66,7 @@ export const CartAsideContainer = styled.aside`
         & .cart-summary{
         background-color: #cbcbcb;
         width: 100%;
-        height: 8%;
+        height: 10%;
         position: absolute;
         bottom: 0;
         display: grid;
@@ -72,7 +74,19 @@ export const CartAsideContainer = styled.aside`
        
 
         button {
-            height: 50%;
+            height: 80%;
+        }
+
+        .see-cart{
+            width: 100%;
+            padding: 9px;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid black;
+
+            p{
+                color: black;
+                font-size: .8rem;
+            }
         }
     }
     }

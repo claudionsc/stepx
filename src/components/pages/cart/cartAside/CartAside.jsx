@@ -44,7 +44,7 @@ export const CartAside = (props) => {
 
         {cartI?.length === 0 ? (
           <div className='carrinho-vazio'>
-            <h5>Seu carrinho está vazio</h5>
+            <h3>Seu carrinho está vazio</h3>
             <p onClick={() => setCart(false)}>Comece a comprar</p>
           </div>
         ) : (
@@ -67,16 +67,15 @@ export const CartAside = (props) => {
               ))}
             </div>
             <div className='cart-summary'>
+              <Link to={'/cart'}>
+                <Button className='see-cart' addcart='Ver carrinho completo' />
+              </Link>
               <Button addcart='Limpar carrinho' onClick={() => handleCleanCart(cartItems)} />
             </div>
           </>
         )}
       </div>
-      <Link to={'/cart'}>
-        <div className='open-wide-cart'>
-          <MdArrowBackIosNew />
-        </div>
-      </Link>
+
     </CartAsideContainer>
   )
 }
