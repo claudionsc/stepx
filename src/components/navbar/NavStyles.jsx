@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavDiv = styled.div`
-    background-color: #347bb9;
+    background-color: white;
     width: 100%;
     height: 8vh;
     position: fixed;
@@ -16,7 +16,6 @@ export const NavDiv = styled.div`
 export const NavLogo = styled.div`
     width: 10%;
     height: 100%;
-    background-color: red;
     margin: 0 10px;
     text-align: center;
     display: grid;

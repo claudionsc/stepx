@@ -7,7 +7,7 @@ export const CartAsideItems = (props) => {
             <img src={props.img} />
 
             <div>
-                <h6>{props.title}</h6>
+                <h5>{props.title}</h5>
                 <p>{props.desc}</p>
                 <p>{props.price}</p>
                 <p>{props.priceParcel}</p>

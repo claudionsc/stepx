@@ -1,24 +1,26 @@
 import styled from "styled-components";
 
 export const MVStyled = styled.span`
-    background-color: red;
-    width: 300px;
-    height: 350px;
+    aspect-ratio: 9/16;
+    width: 20vw;
+    object-fit: contain;
     cursor: pointer;
+    border-bottom:  1px black solid;
 
-    ::before {
-        content: 'Ver mais';
+    & img {
+            aspect-ratio: 9/16;
+            width: 20vw;
+            object-fit: contain;
+        }
+
+    button {
+        
         background-color: black;
         color: white;
-        padding: 10px 40px;
-        border-radius: 117px 117px 117px 117px;
-        -webkit-border-radius: 118px 117px 117px 117px;
-        -moz-border-radius: 118px 117px 117px 117px;
-        height: 20px;
-        font-size: .8rem;
-        position: relative;
-        top: 80%;
-        left: 10%;
+        
+        height: 6%;
+        margin-bottom: 5px;
+
        
     }
 `

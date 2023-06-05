@@ -54,7 +54,7 @@ export const CartAside = (props) => {
                 <>
                   <CartAsideItems
                     key={cartItem.id}
-                    img={cartItem.img}
+                    img={cartItem.img.img01}
                     title={cartItem.nome}
                     price={`R$ ${(cartItem.preco * cartItem.cartQtd).toFixed(2)}`}
                     priceParcel={`10 vezes de R$ ${((cartItem.preco * cartItem.cartQtd) / 10).toFixed(2)}`} />

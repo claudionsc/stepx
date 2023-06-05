@@ -10,7 +10,6 @@
 }
 
 section {
-    background-color: yellowgreen;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -22,7 +21,6 @@ section {
 }
 
   #lancamentos {
-    background-color: goldenrod;
     display: flex;
     place-items: center;
     flex-direction: column;
@@ -31,6 +29,7 @@ section {
     padding-left: 40px;
     width: auto;
     height: 100vh;
+    margin: 0 auto;
 
   }
 
@@ -47,7 +46,6 @@ section {
 
 
 .carousel-wrapper {
-    background-color: aqua;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -76,7 +74,6 @@ button.rec-dot{
 
 
 #vendidos {
-    background-color: yellowgreen;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -88,7 +85,6 @@ button.rec-dot{
 
 
 .vendidos {
-    background-color: pink;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -101,14 +97,12 @@ button.rec-dot{
 }
 
  #produtos {
-    background-color: green;
     justify-content: space-between;
     align-items: flex-start;
     height: auto !important;
     padding-top: 8vh;
 }
 .products-items {
-    background-color: yellow;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);

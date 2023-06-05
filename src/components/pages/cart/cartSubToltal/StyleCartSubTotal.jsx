@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const CSTStyle = styled.span`
     width: 80%;
-    height: 5vh;
-    background-color: yellow;
+    height: 15vh;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -12,7 +11,7 @@ export const CSTStyle = styled.span`
     
 
     button {
-        height: 90%;
+        height: 40%;
         width: 10%;
     }
     

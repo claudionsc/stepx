@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const PHStyled = styled.span`
-    background-color: red;
     width: 20vw;
     height: 60vh;
 

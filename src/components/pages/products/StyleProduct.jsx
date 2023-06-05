@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const PDStyle = styled.main`
     width: 100%;
     height: 100vh;
-    background-color: greenyellow;
     padding: 3% 0;
     
     
     & #product{
-        background-color: rebeccapurple;
         width: 100%;
+        height: auto;
+        
 
 
             & .product-img{
@@ -17,22 +17,37 @@ export const PDStyle = styled.main`
             place-items: center;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 10px;
-            grid-row-gap: 0px;
-            width: 50%;
-            background-color: burlywood;
-            height: 90%;
-            padding: 0 2%;
+            grid-column-gap: 0px;
+            grid-row-gap: 5px;
+            width: 50vw;
 
                 & img {
-                width: 100%;
+                height: 45vh;
                 aspect-ratio: 1/1;
-                background-color: red;
             }
             
         }
 
         
+    }
+
+    .cartQtd{
+        width: 10vw;
+        height: auto;
+        ::after {
+            content: attr(count);
+            position: absolute;
+            right: 4.2%;
+            top: 15%;
+            padding: 2px 5px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            color: white;
+            font-size: .7rem;
+            max-width: 30px;
+            max-height: 30px;
+            text-decoration: none;
+         }
     }
     
     
@@ -46,10 +61,8 @@ export const PDStyle = styled.main`
         
 
         & .desc{
-            background-color: yellow;
-            width: 80%;
+            width: 80vh;
             height: 90%;
-            justify-self: center;
 
         }
 
@@ -59,7 +72,6 @@ export const PDStyle = styled.main`
         }
 
         & .tamanhos{
-            background-color: tomato;
             width: 60%;
             height: 50%;
     

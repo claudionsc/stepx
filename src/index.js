@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   Route,
-  RouterProvider
+  RouterProvider,
+  useParams
 } from 'react-router-dom'
 import App from './App';
 import { Product } from './components/pages/products/Product';
 import { Home } from './components/pages/home/Home';
 import { CartWide } from './components/pages/cart/cartWide/CartWide';
 
+function ProductUrl() {
+  // Get the userId param from the URL.
 
-const product = JSON.parse(localStorage.getItem('product'))
+  
+  let { id } = useParams();
+  // ...
+}
 
 const router = createBrowserRouter([
 
@@ -24,7 +30,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: `/${product.key}`,
+        path: `/:id`,
         element: <Product />
       },
       {

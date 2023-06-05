@@ -9,10 +9,10 @@ import { NavCart } from '../../navbar/NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import CartAsideContext from '../../contexts/CartAsideContext'
 import { CartAside } from '../cart/cartAside/CartAside'
-import AF01 from '../../assets/img/NikeAF01/af01.avif'
 import { NavbarAlt } from '../../navbar/NavbarAlt'
 import { useDispatch, useSelector } from 'react-redux'
 import { showProducts } from '../../../store'
+import { showItems } from '../../../store'
 
 
 export const Product = () => {
@@ -22,18 +22,23 @@ export const Product = () => {
   const dispatch = useDispatch()
   const product = useSelector((state) => state.product.product)
 
+
   // useEffect(() => {
   //   dispatch(showProducts())
   // }, [product], dispatch)
 
-  console.log(product)
+  const handleAddCart = (item) => {
+    
+    dispatch(showItems(item))
+  }
+  const cartQtd = localStorage.getItem('cartTotal')
 
 
   return (
     <PDStyle>
      <NavbarAlt cart={
      <NavCart onClick={() => setCart(true)} >
-      <a><AiOutlineShoppingCart /></a>
+      <a className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
     </NavCart>
   } />
 
@@ -52,7 +57,7 @@ export const Product = () => {
             <p>{`R$ ${product.preco}`}</p>
 
            <Tamanhos disable34={isDisabled} />
-           <Button addcart={'Adicionar ao carrinho'} />
+           <Button onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
           </div>
 
 

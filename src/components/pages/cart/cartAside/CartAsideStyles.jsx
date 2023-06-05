@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CartAsideContainer = styled.aside`
     height: 100vh;
     width: 20vw;
-    background-color: aquamarine;
     position: fixed;
     top: 0;
     right: 0;
@@ -33,13 +32,13 @@ export const CartAsideContainer = styled.aside`
         }
 
         & svg{
-            font-size: .9rem;
+            font-size: 1rem;
         }
     }
 
     & .cart-items-div {
         height: 100%;
-        background-color: palevioletred;
+        background-color: #f1f1f1;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
@@ -51,7 +50,6 @@ export const CartAsideContainer = styled.aside`
             height: 20%;
             display: grid;
             place-items: center;
-            background-color: yellow;
             margin: 50% 0;
 
             p {
@@ -64,7 +62,7 @@ export const CartAsideContainer = styled.aside`
 
 
         & .cart-summary{
-        background-color: red;
+        background-color: #cbcbcb;
         width: 100%;
         height: 8%;
         position: absolute;
@@ -96,7 +94,7 @@ export const CartAsideContainer = styled.aside`
 `
 
 export const StyleCartAsideItems =  styled.div`
-    background-color: cornflowerblue;
+    background-color: white;
     height: 150px;
     width: 100%;
     margin: 10px 0;
