@@ -1,9 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import { PDStyle } from './StyleProduct'
-import { Link } from 'react-router-dom'
-import { MdArrowBackIosNew } from 'react-icons/md'
 import { Tamanhos } from '../../FormTamanhos/Tamanhos'
-import { isDisabled } from '@testing-library/user-event/dist/utils'
 import { Button } from '../../Button/Button'
 import { NavCart } from '../../navbar/NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
@@ -11,21 +8,29 @@ import CartAsideContext from '../../contexts/CartAsideContext'
 import { CartAside } from '../cart/cartAside/CartAside'
 import { NavbarAlt } from '../../navbar/NavbarAlt'
 import { useDispatch, useSelector } from 'react-redux'
-import { showProducts } from '../../../store'
 import { showItems } from '../../../store'
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 export const Product = () => {
+
+  const handleClickValue = () => {
+    
+    console.log(`Submit vindo da Product`)
+}
+
+  const routePath = useLocation();
+  const onTop = () => {
+    window.scrollTo(0, 0);
+  }
+  useEffect(() => {
+    onTop()
+  }, [routePath]);
 
   const { cart, setCart } = useContext(CartAsideContext);
 
   const dispatch = useDispatch()
   const product = useSelector((state) => state.product.product)
-
-
-  // useEffect(() => {
-  //   dispatch(showProducts())
-  // }, [product], dispatch)
 
   const handleAddCart = (item) => {
     
@@ -33,10 +38,11 @@ export const Product = () => {
   }
   const cartQtd = localStorage.getItem('cartTotal')
 
+  const navigate = useNavigate()
 
   return (
     <PDStyle>
-     <NavbarAlt cart={
+     <NavbarAlt onClickAlt={() => navigate(-1)} cart={
      <NavCart onClick={() => setCart(true)} >
       <a className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
     </NavCart>
@@ -56,11 +62,10 @@ export const Product = () => {
             <p> </p>
             <p>{`R$ ${product.preco}`}</p>
 
-           <Tamanhos >
-            {product.tamanhos.map(item => {
-              return <input type="button" value={item[item]} className="tamanhos-btn" />
-            })}
-           </Tamanhos>
+           <Tamanhos sizes={product.tamanhos.map((item) => {
+              return <button onClick={() => handleClickValue()} className="tamanhos-btn" key={item} >{item}</button>
+            })} />
+
            <Button onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
           </div>
 

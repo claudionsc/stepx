@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import { CartWideTitles } from './StyleCartWide'
 import { CartSubTotal } from '../cartSubToltal/CartSubTotal'
 import { NavbarAlt } from '../../../navbar/NavbarAlt'
+import { useNavigate } from 'react-router-dom'
 
 export const CartWide = () => {
 
@@ -42,9 +43,11 @@ export const CartWide = () => {
     dispatch(getSubtotal())
   }, [cartItems, dispatch])
 
+  const navigate = useNavigate()
+
   return (
     <CWStyle>
-      <NavbarAlt />
+      <NavbarAlt onClickAlt={() => navigate(-1)} />
 
       {cartI?.length === 0 ? (
         <div className='carrinho-vazio'>

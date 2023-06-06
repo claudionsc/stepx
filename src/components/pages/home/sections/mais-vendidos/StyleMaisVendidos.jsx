@@ -17,7 +17,6 @@ export const MVStyled = styled.span`
         
         background-color: black;
         color: white;
-        
         height: 6%;
         margin: 15px 0;
 

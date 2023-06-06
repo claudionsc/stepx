@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-export default styled.div`
+export const S3DStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: #821212;
     color: white;
-    
-    font-size: 4rem;
 `

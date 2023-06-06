@@ -81,7 +81,7 @@ import LC04 from '../../../../assets/img/Lacoste Croco/LC04.webp'
 
 
 export const List = [
-            {key:'newbalance-550', id:1, nome:'Tênis New Balance 550 Masculino', preco: 999.99, img: {img01:NB01, img02: NB02, img03: NB03, img04: NB04}, tamanhos: ['35', '36', '37', '38', '39', '40', '41', '42', '43'] },
+            {key:'newbalance-550', id:1, nome:'Tênis New Balance 550 Masculino', preco: 999.99, img: {img01:NB01, img02: NB02, img03: NB03, img04: NB04}, tamanhos: [35, 36, 37, 38, 39, 40, 41, 42, 43]},
              {key:'nike-metcon8', id:2 ,nome:'Tênis Nike Metcon 8 Masculino', preco: 1299.99,  img: {img01:NKMET801, img02: NKMET802, img03: NKMET803, img04: NKMET804}, tamanhos: ['36', '37', '38', '39', '40', '41', '42', '43','44','46'] },
              {key:'adidas-yeezy700', id:3, nome:'Tênis Adidas Yeezy 700 V2 Tephra Masculino', preco: 1999.99,  img: {img01:YE70001, img02: YE70002, img03: YE70003, img04: YE70004}, tamanhos: ['37', '38', '41', '42'] },
              {key:'adidas-adilette200', id:4 ,nome:'Adidas Adilette 200', preco: 399.99, img: {img01:ADLT01, img02: ADLT02, img03: ADLT03, img04: ADLT04}, tamanhos: ['35', '36', '37', '38', '39', '40', '41', '42', '43','45','46'] },

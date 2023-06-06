@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const HFStyle = styled.aside`
-    background-color: rgb(60, 187, 255);
     width: 30%;
-    height: 100%;
-
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%;
+    left: 0;
    
     & p{
         padding: 10px;

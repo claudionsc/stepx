@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavDiv = styled.div`
     background-color: white;
-    width: 100%;
+    width: 100vw;
     height: 8vh;
     position: fixed;
     top: 0;
@@ -38,7 +38,6 @@ export const NavCart = styled.div`
     cursor: pointer;
 
     .cartQtd{
-        width: 10vw;
         height: auto;
         ::after {
             content: attr(count);
@@ -82,6 +81,7 @@ export const NALTStyle = styled.nav`
             flex-direction: row;
             align-items: center;
             margin-left: 2%;
+            cursor: pointer;
            
         }
         

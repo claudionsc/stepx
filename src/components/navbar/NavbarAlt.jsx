@@ -13,10 +13,10 @@ export const NavbarAlt = (prop) => {
     
   return (
     <NALTStyle>
-    <Link to={'/'}>
+    <a onClick={prop.onClickAlt}>
       <MdArrowBackIosNew />
       <p>Voltar pra home</p>
-    </Link>
+    </a>
 
     <div>
         {prop.cart}

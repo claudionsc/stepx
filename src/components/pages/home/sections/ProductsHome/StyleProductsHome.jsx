@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const PHStyled = styled.span`
+    aspect-ratio: 9/16;
     width: 20vw;
-    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
 
     & img{
-        width: 100%;
-        height: 75%;
+        width: 20vw;
         object-fit: contain;
-        position: relative;
-       
-        
+        aspect-ratio: 9/16;
+        height: 40vh;
 
     }
 
     & .desc-product-home{
         height: 25%;
+        margin-top: 50%;
 
         & button {
             height: 30%;

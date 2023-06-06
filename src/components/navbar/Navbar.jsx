@@ -12,7 +12,7 @@ export const Navbar = () => {
   const { cart, setCart } = useContext(CartContext);
 
   const cartQtd = localStorage.getItem('cartTotal')
-  const cartItems = useSelect((state) => state.frutas)
+  const cartItems = useSelect((state) => state.cartItems)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -26,15 +26,15 @@ export const Navbar = () => {
         <NavLogo>
           <a href="/"><TbShoe /></a>
         </NavLogo>
-        <NavUl class="nav flex-row">
-          <li class="nav-item">
-            <a class="nav-link active" href="#lancamentos">Lançamentos</a>
+        <NavUl className="nav flex-row">
+          <li className="nav-item">
+            <a className="nav-link active" href="#shoes3d">Início</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#vendidos">Mais vendidos</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#vendidos">Mais vendidos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#produtos">Todos os produtos</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#produtos">Todos os produtos</a>
           </li>
 
         </NavUl>

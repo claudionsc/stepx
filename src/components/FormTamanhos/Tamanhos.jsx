@@ -1,10 +1,13 @@
 import React from 'react'
 import { TMStyle } from './StyleTamanhos'
 
+
+
 export const Tamanhos = (props) => {
+
     return (
-        <TMStyle>
-           <input type="button" value={props.value} className="tamanhos-btn" />          
+        <TMStyle key={props.key} >
+            {props.sizes}
         </TMStyle>
     )
 }

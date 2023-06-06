@@ -13,7 +13,7 @@ export const NikeShoe = () => {
     <>
       <div>
 
-        <Canvas eventSource={document.getElementById('root')} eventPrefix='client' camera={{ position: [0, 0, 4], fov: 40 }}>
+        <Canvas eventSource={document.getElementById('root')} eventPrefix='client' camera={{ position: [0, 0, 3], fov: 40 }}>
           <ambientLight intensity={0.7} />
           <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, -5]} castShadow />
           
