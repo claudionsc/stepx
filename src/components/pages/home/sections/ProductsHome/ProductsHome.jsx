@@ -1,10 +1,9 @@
 import React from 'react'
 import { PHStyled } from './StyleProductsHome'
-import { Button } from '../../../../Button/Button'
 import { Link } from 'react-router-dom'
 
 export const ProductsHome = (props) => {
-    
+
     return (
         <PHStyled className={props.className} id={props.id} onClick={props.verPag}  >
             <Link to={props.link} >
@@ -14,7 +13,6 @@ export const ProductsHome = (props) => {
             <div className="desc-product-home">
                 <h5>{props.nome}</h5>
                 <p>{props.preco}</p>
-                <Button onClick={props.onClick} addcart={props.addcart}/>
             </div>
         </PHStyled>
     )

@@ -27,7 +27,9 @@ export const HFStyle = styled.aside`
 
     }
     & #preco {
-        background-color: brown;
+
+        .opcao{
+        }
 
         input{
             scale: 150%;

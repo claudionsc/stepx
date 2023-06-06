@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, { useContext, useEffect } from 'react'
 import { PDStyle } from './StyleProduct'
 import { Tamanhos } from '../../FormTamanhos/Tamanhos'
 import { Button } from '../../Button/Button'
@@ -15,9 +15,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 export const Product = () => {
 
   const handleClickValue = () => {
-    
+
     console.log(`Submit vindo da Product`)
-}
+  }
 
   const routePath = useLocation();
   const onTop = () => {
@@ -31,23 +31,23 @@ export const Product = () => {
 
   const dispatch = useDispatch()
   const product = useSelector((state) => state.product.product)
+  const cartQtd = useSelector((state) => state.item)
 
   const handleAddCart = (item) => {
-    
+
     dispatch(showItems(item))
   }
-  const cartQtd = localStorage.getItem('cartTotal')
 
   const navigate = useNavigate()
 
   return (
     <PDStyle>
-     <NavbarAlt onClickAlt={() => navigate(-1)} 
-     cart={
-     <NavCart onClick={() => setCart(true)} >
-      <a className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
-    </NavCart>
-  } />
+      <NavbarAlt onClickAlt={() => navigate(-1)}
+        cart={
+          <NavCart>
+            <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd.cartTotal}</p><AiOutlineShoppingCart /></a>
+          </NavCart>
+        } />
 
       <section id='product'>
         <span className='product-img'>
@@ -63,11 +63,11 @@ export const Product = () => {
             <p> </p>
             <p>{`R$ ${product.preco}`}</p>
 
-           <Tamanhos sizes={product.tamanhos.map((item) => {
+            <Tamanhos sizes={product.tamanhos.map((item) => {
               return <button onClick={() => handleClickValue()} className="tamanhos-btn" key={item} >{item}</button>
             })} />
 
-           <Button onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
+            <Button onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
           </div>
 
 

@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const PricesContexts = createContext(200)
+const PricesContexts = createContext('all')
 
 export default PricesContexts

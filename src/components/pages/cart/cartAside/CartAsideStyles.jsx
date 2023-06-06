@@ -17,19 +17,7 @@ export const CartAsideContainer = styled.aside`
         border-radius: 50%;
         z-index: 0;
 
-        :hover {
-            ::before{
-                content: 'Ver carrinho completo';
-                background-color: black;
-                color: white;
-                width: 6vw;
-                padding: 2px;
-                position: absolute;
-                font-size: 0.5rem;
-                right: 18%;
-                text-align: center;
-            }
-        }
+       
 
         & svg{
             font-size: 1rem;
@@ -52,11 +40,14 @@ export const CartAsideContainer = styled.aside`
             place-items: center;
             margin: 50% 0;
 
-
+          
 
             p {
                 text-decoration: underline;
                 cursor: pointer;
+                border: 1px solid black;
+                padding: 20px;
+                border-radius: 117px 117px 117px 117px;
             }
 
             

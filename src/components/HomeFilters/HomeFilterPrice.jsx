@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import PricesContexts from '../contexts/prices/PricesContexts'
+
 
 export const HomeFilterPrice = () => {
+    
+    const {prices, setPrices} = useContext(PricesContexts)
+    
+    const handleChange = (event) => {
+        setPrices(event.target.value);
+    };
 
-    
-    
+
     return (
         <form id='preco'>
-            <input type="radio" className='preco' id='todos' name='all' checked/>
-            <label htmlFor='todos'>Todos os preços</label><br />
-            <input type="radio" className='preco' id='ate100' name='200'/>
-            <label htmlFor='ate100'>Até R$199</label><br />
-            <input type="radio" className='preco' id='ate200' name='500'/>
-            <label htmlFor='ate200'>Até R$499</label><br />
-            <input type="radio" className='preco' id='ate300' name='700'/>
-            <label htmlFor='ate300'>Até R$699</label><br />
-            <input type="radio" className='preco' id='acimade300' name='1000'/>
-            <label htmlFor='acimade300'>Acima de R$999</label><br />
+           
+            <div className="opcao">
+                <input value={200} type="radio" className='preco' id='200' name='preco' onChange={handleChange} />
+                <label htmlFor='200'>Até R$199</label>
+            </div>
+            <div className="opcao">
+                <input value={500} type="radio" className='preco' id='500' name='preco' onChange={handleChange} />
+                <label htmlFor='500'>Até R$499</label>
+            </div>
+            <div className="opcao">
+                <input value={700} type="radio" className='preco' id='700' name='preco' onChange={handleChange} />
+                <label htmlFor='700'>Até R$699</label>
+            </div>
+            <div className="opcao">
+                <input value={1000} type="radio" className='preco' id='1000' name='preco' onChange={handleChange} />
+            <label htmlFor='1000'>Acima de R$999</label>
+            </div>
+            
         </form>
     )
 }

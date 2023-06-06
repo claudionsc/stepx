@@ -37,22 +37,19 @@ export const NavCart = styled.div`
     place-items: center;
     cursor: pointer;
 
-    .cartQtd{
+    p{
         height: auto;
-        ::after {
-            content: attr(count);
-            position: absolute;
-            right: 4.2%;
-            top: 15%;
-            padding: 2px 5px;
-            border-radius: 50%;
-            background-color: #ff0000;
-            color: white;
-            font-size: .7rem;
-            max-width: 30px;
-            max-height: 30px;
-            text-decoration: none;
-         }
+        position: absolute;
+        right: 4.2%;
+        top: 15%;
+        padding: 2px 5px;
+        border-radius: 50%;
+        background-color: #ff0000;
+        color: white;
+        font-size: .7rem;
+        max-width: 30px;
+        max-height: 30px;
+        text-decoration: none;
     }
 
 

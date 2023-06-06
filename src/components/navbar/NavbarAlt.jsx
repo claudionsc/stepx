@@ -18,7 +18,7 @@ export const NavbarAlt = (prop) => {
       <p>Voltar pra home</p>
     </a>
 
-    <div>
+    <div className='navcart'>
         {prop.cart}
     </div>
     

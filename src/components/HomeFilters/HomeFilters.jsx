@@ -5,20 +5,21 @@ import { HomeFilterPrice } from './HomeFilterPrice'
 import { useState } from 'react'
 import { List } from '../pages/home/sections/ProductsHome/LoadProductsHome'
 import HasSizesContexts from '../contexts/hasSizes/HasSizesContexts'
+import PricesContexts from '../contexts/prices/PricesContexts'
 
 const homeSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
 
 
 export const HomeFilters = () => {
 
-    // const [items, setItems] = useState(List)
 
     const { size, setSize } = useContext(HasSizesContexts)
+    const { prices, setPrices} = useContext(PricesContexts)
 
     return (
         <HFStyle>
             <span className="filter-title">
-                <p>Tamanho</p>
+                <p>Produtos com o tamanho: {size}</p>
                 <h6 onClick={() => setSize(37)}>Remover filtro</h6>
                 <Tamanhos
                     sizes={homeSizes.map((item) => {
@@ -27,8 +28,8 @@ export const HomeFilters = () => {
                 />
             </span>
             <span className="filter-title">
-                <p>Preço</p>
-                <h6>Remover filtro</h6>
+                <p>Produtos com o preço: </p>
+                <h6 onClick={() => setPrices('all')}>Remover filtro</h6>
                 <HomeFilterPrice />
             </span>
         </HFStyle>

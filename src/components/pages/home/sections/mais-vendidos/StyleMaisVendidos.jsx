@@ -4,7 +4,6 @@ export const MVStyled = styled.span`
     aspect-ratio: 9/16;
     width: 20vw;
     object-fit: contain;
-    cursor: pointer;
     
 
     & img {
