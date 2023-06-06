@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from 'react'
 import { CartAsideContainer } from './CartAsideStyles'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import CartAsideContext from '../../../contexts/CartAsideContext'
+import CartAsideContext from '../../../contexts/cartAside/CartAsideContext'
 import { useDispatch, useSelector } from 'react-redux'
 import { cleanCart, decreaseCart, getTotals, showItems } from '../../../../store'
 import { CartAsideItems } from './CartAsideItems'
 import { Button } from '../../../Button/Button'
 import { Counter } from '../../../Counter/Counter'
-import { MdArrowBackIosNew } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
 export const CartAside = (props) => {

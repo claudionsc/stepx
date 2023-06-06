@@ -12,11 +12,7 @@ import { Home } from './components/pages/home/Home';
 import { CartWide } from './components/pages/cart/cartWide/CartWide';
 
 function ProductUrl() {
-  // Get the userId param from the URL.
-
-  
   let { id } = useParams();
-  // ...
 }
 
 const router = createBrowserRouter([

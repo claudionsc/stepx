@@ -57,12 +57,11 @@ section {
 
 
  #produtos {
-    justify-content: center;
+    justify-content: start;
     align-items: start;
     height: auto !important;
-    /* padding-top: 8vh; */
+    padding-top: 8vh;
     width: 100vw;
-    background-color: red;
 }
 
 
@@ -72,7 +71,10 @@ section {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    width: 70%;
     padding: 20px 0;
+
+   & .false{
+     display: none;
+    }
    
 }

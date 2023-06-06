@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { NavLogo, NavDiv, NavCart, NavUl } from './NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { TbShoe } from 'react-icons/tb'
-import CartContext from '../contexts/CartAsideContext'
+import CartContext from '../contexts/cartAside/CartAsideContext'
 import { useSelect } from '@react-three/drei'
 import { useDispatch } from 'react-redux'
 import { getTotals } from '../../store'
@@ -38,8 +38,8 @@ export const Navbar = () => {
           </li>
 
         </NavUl>
-        <NavCart onClick={() => setCart(true)} >
-          <a className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
+        <NavCart >
+          <a onClick={() => setCart(true)}  className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
         </NavCart>
       </NavDiv>
   )

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export const ProductsHome = (props) => {
     
     return (
-        <PHStyled id={props.id} onClick={props.verPag}  >
+        <PHStyled className={props.className} id={props.id} onClick={props.verPag}  >
             <Link to={props.link} >
                 <img src={props.img} className='img' />
             </Link>

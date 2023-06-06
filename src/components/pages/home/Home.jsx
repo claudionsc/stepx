@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Navbar } from '../../navbar/Navbar'
-import CartContext from '../../contexts/CartAsideContext';
+import CartContext from '../../contexts/cartAside/CartAsideContext';
+import HasSizesContext from '../../contexts/hasSizes/HasSizesContexts'
 import { CartAside } from '../cart/cartAside/CartAside';
 import '../../../styles/home.css'
 import { MaisVendidos } from './sections/mais-vendidos/MaisVendidos';
@@ -11,11 +12,22 @@ import { ProductsHome } from './sections/ProductsHome/ProductsHome'
 import { showItems, showProducts } from '../../../store';
 import { useDispatch } from 'react-redux';
 
-export const Home = () => {
 
-  const [items, setItems] = useState(List)
+
+export const Home = () => {
+  
+  const homeSizes = [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+  // const [items, setItems] = useState(List)
+
 
   const { cart, setCart } = useContext(CartContext);
+
+  const { size, setSize } = useContext(HasSizesContext)
+
+  let sizesClassName = ''
+
+
+
 
   const dispatch = useDispatch()
 
@@ -29,27 +41,31 @@ export const Home = () => {
   }
 
   return (
-    <main id='main'>
-      <Navbar />
 
-      <section id='shoes3d' >
-        <Inicio />
-      </section>
+      <main id='main'>
+        <Navbar />
 
-      <section id='vendidos'>
-        <main className='vendidos'>
-          <MaisVendidos verPag={() => seePag(List[0])} nome={List[0].nome} img={List[0].img.img01} Link={`/${List[0].key}`} />
-          <MaisVendidos verPag={() => seePag(List[6])} nome={List[6].nome} img={List[6].img.img01} Link={`/${List[6].key}`} />
-          <MaisVendidos verPag={() => seePag(List[7])} nome={List[7].nome} img={List[7].img.img01} Link={`/${List[7].key}`} />
-          <MaisVendidos verPag={() => seePag(List[8])} nome={List[8].nome} img={List[8].img.img01} Link={`/${List[8].key}`} />
-        </main>
-      </section>
+        <section id='shoes3d' >
+          <Inicio />
+        </section>
 
-      <section id='produtos'>
+        <section id='vendidos'>
+          <main className='vendidos'>
+            <MaisVendidos verPag={() => seePag(List[0])} nome={List[0].nome} img={List[0].img.img01} Link={`/${List[0].key}`} />
+            <MaisVendidos verPag={() => seePag(List[6])} nome={List[6].nome} img={List[6].img.img01} Link={`/${List[6].key}`} />
+            <MaisVendidos verPag={() => seePag(List[7])} nome={List[7].nome} img={List[7].img.img01} Link={`/${List[7].key}`} />
+            <MaisVendidos verPag={() => seePag(List[8])} nome={List[8].nome} img={List[8].img.img01} Link={`/${List[8].key}`} />
+          </main>
+        </section>
+
+        <section id='produtos'>
           <HomeFilters />
           <article className='products-items'>
-            {items.map(item => {
+            {List.map(item => {
+              sizesClassName = `${item.tamanhos.includes(size)}`
+              
               return <ProductsHome
+              className={sizesClassName}
                 key={item.key}
                 id={item.id}
                 nome={item.nome}
@@ -59,13 +75,14 @@ export const Home = () => {
                 onClick={() => handleAddCart(item)}
                 verPag={() => seePag(item)}
                 addcart={"Adicionar ao carrinho"} />
-            }
+              }
             )}
           </article>
-      </section>
+        </section>
 
-      {cart === true && <CartAside />}
+        {cart === true && <CartAside />}
 
-    </main>
+      </main>
+
   )
 }

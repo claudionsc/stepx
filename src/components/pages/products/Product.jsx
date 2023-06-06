@@ -4,7 +4,7 @@ import { Tamanhos } from '../../FormTamanhos/Tamanhos'
 import { Button } from '../../Button/Button'
 import { NavCart } from '../../navbar/NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import CartAsideContext from '../../contexts/CartAsideContext'
+import CartAsideContext from '../../contexts/cartAside/CartAsideContext'
 import { CartAside } from '../cart/cartAside/CartAside'
 import { NavbarAlt } from '../../navbar/NavbarAlt'
 import { useDispatch, useSelector } from 'react-redux'
@@ -42,7 +42,8 @@ export const Product = () => {
 
   return (
     <PDStyle>
-     <NavbarAlt onClickAlt={() => navigate(-1)} cart={
+     <NavbarAlt onClickAlt={() => navigate(-1)} 
+     cart={
      <NavCart onClick={() => setCart(true)} >
       <a className='cartQtd' count={cartQtd}><AiOutlineShoppingCart /></a>
     </NavCart>

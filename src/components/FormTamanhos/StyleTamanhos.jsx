@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 export const TMStyle =  styled.span`
-    background-color: bisque;
-    height: 35%;
-    width: 50%;
+    height: 30vh;
+    width: 90%;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -21,7 +21,7 @@ export const TMStyle =  styled.span`
         
         &:hover{
             border: 1px black solid;
-            background-color: #e7e5e5;
+            background-color: #f3f3f3;
         }
        
     }

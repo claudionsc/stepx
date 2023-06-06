@@ -2,20 +2,27 @@ import styled from "styled-components";
 
 export const HFStyle = styled.aside`
     width: 30%;
+    
     position: -webkit-sticky;
     position: sticky;
     top: 10%;
     left: 0;
+
+    h6{
+        margin: 10px;
+        cursor: pointer;
+    }
+    
    
     & p{
         padding: 10px;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
+        width: 90%;
     }
 
     & form{
         width: 70%;
-        aspect-ratio: 4/3;
         margin: 5% auto;
 
     }
