@@ -1,32 +1,45 @@
 import React, { useState } from 'react'
-import {S3DStyle} from './StyleInicio'
+import { S3DStyle } from './StyleInicio'
 
 import { NikeShoe } from '../shoes/NikeShoe'
 import { Shoe } from '../shoes/shoes3d/Shoe'
+import { useEffect } from 'react'
+import { useRef } from 'react'
 
 
 
-let shoe = {}
 const Slide = () => {
-  
-  
-  // const shoeArray = [<NikeShoe />, 1]
-  const shoeArray = [2, 1]
 
-  for(let i = 0; i < shoeArray.length; i++ ){
-    const time = new Date()
-    time.getSeconds(3)
-    shoe = shoeArray[i]
-    // console.log(shoe)
+  const shoe1 = 1
+  const shoe2 = 2
+  const shoe3 = 3
 
-    // return shoe
+  const classes = useRef('true')
+  
     
-  }
-  
-  return (
+  useEffect(() => {
 
-    <S3DStyle>
-      {shoe}
+    const interval = setInterval(() => {
+      classes.current = 'false'
+      console.log(1)
+    }, 3000);
+    
+  })
+
+  
+
+
+  return (
+    <S3DStyle >
+      <div id="shoes1" className={classes} data-anime="show" on >
+        {shoe1}
+      </div>
+      <div id="shoes2" data-anime="show" on >
+        {shoe2}
+      </div>
+      <div id="shoes3" data-anime="show" on >
+        {shoe3}
+      </div>
     </S3DStyle>
   )
 }

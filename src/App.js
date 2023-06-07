@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from './store'
 import PricesContexts from "./components/contexts/prices/PricesContexts";
-
+import { AnimationBg } from "./components/animations/AnimationBg";
 
 
 function App() {
@@ -23,12 +23,15 @@ function App() {
         <HasSizesContexts.Provider value={{ size, setSize }}>
           <PricesContexts.Provider value={{prices, setPrices}}>
           <div className="App">
+            <AnimationBg />
             <Outlet />
           </div>
           </PricesContexts.Provider>
         </HasSizesContexts.Provider>
       </CartAsideContext.Provider>
     </Provider>
+
+  
   );
 }
 

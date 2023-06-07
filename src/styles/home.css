@@ -15,8 +15,8 @@ section {
     justify-content: center;
     align-items: center;
     height: 100vh !important;
-    /* position: relative; */
-    /* background-position: 50% 50%; */
+    position: relative;
+    background-position: 50% 50%;
 }
 
   #shoes3d {
@@ -27,9 +27,43 @@ section {
     justify-content: center;
     width: auto;
     height: 100vh ;
+    overflow: hidden;
+    background-attachment: fixed;
+
 
   }
 
+  #shoes3d::before{
+    content: '';
+    background-image: url('../components/assets/img/Inicio/bg01.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    --webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: zoomAnimation 20s infinite ease-in-out;
+    overflow: hidden;
+
+  }
+
+  @keyframes zoomAnimation {
+    0% {
+        transform: scale(100%);
+    }
+
+    50% {
+        transform: scale(150%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+  }
+
+   
 
 
 #vendidos {

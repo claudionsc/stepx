@@ -48,7 +48,7 @@ export const Home = () => {
       <main id='main'>
         <Navbar />
 
-        <section id='shoes3d' >
+        <section id='shoes3d'>
           <Inicio />
         </section>
 

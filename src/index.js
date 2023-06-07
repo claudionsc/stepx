@@ -15,6 +15,8 @@ function ProductUrl() {
   let { id } = useParams();
 }
 
+
+
 const router = createBrowserRouter([
 
   {
