@@ -8,13 +8,13 @@ export const S3DStyle = styled.div`
 
     & #shoes1{
 
-        height: 10vh;
-        width: 10vw;
-        background-color: #821212;
+        height: 90%;
+        width: 100%;
         color: white;
         position: absolute;
-        left: 50%;
-        top: 50%;
+        left: 0%;
+        top: 0%;
+
     }
    
    [data-anime]{
