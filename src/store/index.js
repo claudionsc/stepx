@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem('cartItems')) : [],
   cartTotal: 0,
   cartSubtotal: 0,
-  cartSize: localStorage.getItem("sizeToCart") ? JSON.parse(localStorage.getItem("sizeToCart")) : []
+  // cartSize: 0
 }
 
 const PRODUCTS_STATE = {
@@ -36,14 +36,31 @@ const ItemReducers = createReducer(INITIAL_STATE, {
       (item) => item.id === action.payload.id
     );
 
+    const sizeToCart = localStorage.getItem("sizeToCart")
+
+
+
     if (itemIndex >= 0){
       state.cartItems[itemIndex].cartQtd += 1
-      state.cartItems[itemIndex].size = state.cartSize
+      state.cartItems[itemIndex].size.push(sizeToCart)
+      
     } else {
-      const qtd = { ...action.payload, cartQtd: 1, size: state.cartSize};
-     
+      const qtd = { ...action.payload, cartQtd: 1, size: [sizeToCart]};
+
+      console.log(qtd)
       state.cartItems.push(qtd)
+
+      // if(qtd.cartQtd > 1){
+      //   state.cartItems[itemIndex].size = [state.cartItems[itemIndex].size, sizeToCart]
+      // }
+
+      
     }
+   
+
+    // if(state.cartItems.cartQtd > 1){
+    //   state.cartItems[itemIndex].size.push(...sizeToCart, sizeToCart)
+    // }
 
     localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     localStorage.setItem("cartTotal", JSON.stringify(state.cartTotal))
@@ -67,6 +84,7 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
     if(state.cartItems[itemIndex].cartQtd > 1){
       state.cartItems[itemIndex].cartQtd -= 1
+      state.cartItems[itemIndex].size.pop()
     } else if (state.cartItems[itemIndex].cartQtd === 1){
       const nextCartItem = state.cartItems.filter(
         cartItems => cartItems.id !== action.payload.id

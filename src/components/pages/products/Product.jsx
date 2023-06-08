@@ -39,10 +39,21 @@ export const Product = () => {
   const navigate = useNavigate()
   
   
+  const [disabledButton, setDisabledButton ] = useState(true)
+
+  const [showSize, setShowSize] = useState()
+
   const setSizeToCart = (item) => {
+
+    setShowSize(item)
+    
     dispatch(addSizeToProduct(item))
   } 
+
+
   
+
+
   return (
     <PDStyle>
       <NavbarAlt onClickAlt={() => navigate(-1)}
@@ -64,13 +75,14 @@ export const Product = () => {
             <h1>{product.nome}</h1>
             <p> </p>
             <p>{`R$ ${product.preco}`}</p>
-            <p>{'Escolha o seu tamanho:'}</p>
+            <p>{`Escolha o seu tamanho: `}</p>
+            <h3>{showSize}</h3>
 
-            <Tamanhos sizes={product.tamanhos.map((item) => {
+            <Tamanhos onFocus={() => setDisabledButton(false)} sizes={product.tamanhos.map((item) => {
               return <button onClick={() => setSizeToCart(item)} className="tamanhos-btn" key={item} >{item}</button>
             })} />
 
-            <Button onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
+            <Button disabled={disabledButton} onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
           </div>
 
 

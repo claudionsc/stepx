@@ -68,7 +68,10 @@ export const CartWide = () => {
                   <CartWideItems
                     key={cartItem.id}
                     img={cartItem.img.img01}
-                    title={cartItem.nome}
+                    title={`
+                    ${cartItem.nome}.
+                    Tamanho(s): ${cartItem.size}
+                    `}
                     counter={ 
                     <Counter
                       qtd={cartItem.cartQtd}

@@ -82,6 +82,13 @@ export const PDStyle = styled.main`
                 width: 20vw;
             }
 
+            button{
+                :disabled{
+                    cursor: not-allowed;
+
+                }
+            }
+         
             .tamanhos-btn{
                 width: 100%;
             }
@@ -100,6 +107,6 @@ export const PDStyle = styled.main`
         }
     }
      
-
+    
    
 `
