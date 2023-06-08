@@ -18,6 +18,9 @@ export const TMStyle =  styled.span`
         border: 1px gray solid;
         border-radius: 5px;
         cursor: pointer;
+        :focus{
+            background-color: #d5d5d5;
+        }
         
         &:hover{
             border: 1px black solid;

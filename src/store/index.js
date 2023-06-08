@@ -3,11 +3,13 @@ import {  configureStore, createAction, createReducer } from '@reduxjs/toolkit'
 const INITIAL_STATE = {
   cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem('cartItems')) : [],
   cartTotal: 0,
-  cartSubtotal: 0
+  cartSubtotal: 0,
+  cartSize: localStorage.getItem("sizeToCart") ? JSON.parse(localStorage.getItem("sizeToCart")) : []
 }
 
 const PRODUCTS_STATE = {
-  product: localStorage.getItem("product") ? JSON.parse(localStorage.getItem("product")) : []
+  product: localStorage.getItem("product") ? JSON.parse(localStorage.getItem("product")) : [],
+  sizeToProduct: localStorage.getItem("sizeToCart") ? JSON.parse(localStorage.getItem("sizeToCart")) : []
 }
 
 // ACTIONS CART
@@ -23,6 +25,7 @@ export const getSubtotal = createAction('getSubTotal')
 // ACTIONS PRODUCTS
 
 export const showProducts = createAction('showProducts')
+export const addSizeToProduct = createAction('addSizeToProduct')
 
 
 // CART REDUCERS
@@ -35,8 +38,10 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
     if (itemIndex >= 0){
       state.cartItems[itemIndex].cartQtd += 1
+      state.cartItems[itemIndex].size = state.cartSize
     } else {
-      const qtd = { ...action.payload, cartQtd: 1};
+      const qtd = { ...action.payload, cartQtd: 1, size: state.cartSize};
+     
       state.cartItems.push(qtd)
     }
 
@@ -117,10 +122,18 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
 const ProductReducers = createReducer(PRODUCTS_STATE, {
   [showProducts]: (state, action) => {
-    const products = action.payload
+    const products = {...action.payload}
     state.product = products
 
     localStorage.setItem("product", JSON.stringify(state.product))
+  },
+
+  [addSizeToProduct]: (state, action) => {
+    const size = action.payload
+    state.sizeToProduct = size
+    
+
+    localStorage.setItem("sizeToCart", JSON.stringify(state.sizeToProduct))
   }
 })
 

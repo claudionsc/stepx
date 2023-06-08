@@ -73,6 +73,18 @@ export const PDStyle = styled.main`
          .desc{
             width: 80vh;
             height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            span{
+                width: 20vw;
+            }
+
+            .tamanhos-btn{
+                width: 100%;
+            }
 
         }
 

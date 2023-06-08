@@ -14,7 +14,7 @@ const Slide = () => {
   return (
     <S3DStyle >
       <div id="shoes1" data-anime="show" >
-        <Shoe />
+        {/* <Shoe /> */}
       </div>
     </S3DStyle>
   )

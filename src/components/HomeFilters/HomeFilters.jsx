@@ -28,8 +28,8 @@ export const HomeFilters = () => {
                 />
             </span>
             <span className="filter-title">
-                <p>Produtos com o preço: </p>
-                <h6 onClick={() => setPrices('all')}>Remover filtro</h6>
+                <p>Produtos com o preço: {prices} </p>
+                <h6 onClick={() => setPrices('todos')}>Remover filtro</h6>
                 <HomeFilterPrice />
             </span>
         </HFStyle>

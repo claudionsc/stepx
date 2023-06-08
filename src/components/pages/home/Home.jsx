@@ -12,6 +12,7 @@ import { ProductsHome } from './sections/ProductsHome/ProductsHome'
 import { showItems, showProducts } from '../../../store';
 import { useDispatch } from 'react-redux';
 import PricesContexts from '../../contexts/prices/PricesContexts';
+import SizeToCart from '../../contexts/sizesToCart/SizesToCart';
 
 
 
@@ -24,6 +25,7 @@ export const Home = () => {
   const { cart, setCart } = useContext(CartContext);
 
   const { size, setSize } = useContext(HasSizesContext)
+
 
   const { prices, setPrices } = useContext(PricesContexts)
 
@@ -77,13 +79,15 @@ export const Home = () => {
                 hasPrices = true
               } else if (prices == 1000 && item.preco > prices) {
                 hasPrices = true
-              } else if (prices == 'all') {
+              } else if (prices == 'todos') {
                 sizesClassName = true
               } else {
                 hasPrices = false
               }
 
               sizesClassName = `${hasSizes && hasPrices}`
+
+              
 
               return <ProductsHome
                 className={sizesClassName}
@@ -93,7 +97,7 @@ export const Home = () => {
                 preco={`R$ ${item.preco}`}
                 img={item.img.img01}
                 link={`/${item.key}`}
-                onClick={() => handleAddCart(item)}
+                sizeToCart={'teste'}
                 verPag={() => seePag(item)}
                  />
               }
