@@ -47,6 +47,7 @@ const ItemReducers = createReducer(INITIAL_STATE, {
 
     localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     localStorage.setItem("cartTotal", JSON.stringify(state.cartTotal))
+    // localStorage.setItem("cartSize", JSON.stringify(state.cartSize))
     
   },
 
