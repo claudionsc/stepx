@@ -11,8 +11,8 @@ export const CSTStyle = styled.span`
     
 
     button {
-        height: 40%;
-        width: 10%;
+        height: 5vh;
+        width: 15vw;
     }
     
     

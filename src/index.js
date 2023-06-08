@@ -10,6 +10,7 @@ import App from './App';
 import { Product } from './components/pages/products/Product';
 import { Home } from './components/pages/home/Home';
 import { CartWide } from './components/pages/cart/cartWide/CartWide';
+import { Purchase } from './components/pages/purchase/Purchase';
 
 function ProductUrl() {
   let { id } = useParams();
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <CartWide />
+      },
+      {
+        path: "/purchase",
+        element: <Purchase />
       },
       {
         path: "/login",
