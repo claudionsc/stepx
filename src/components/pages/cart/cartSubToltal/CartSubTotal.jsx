@@ -7,7 +7,7 @@ export const CartSubTotal = (props) => {
   return (
     <CSTStyle>
       <p>Subtotal: {props.subtotal}</p>
-      <Link to="/purchase">
+      <Link to="/checkout">
         <Button addcart={'Finalizar compra'} />
       </Link>
     </CSTStyle>
