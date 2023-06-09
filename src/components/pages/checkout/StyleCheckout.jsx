@@ -99,17 +99,21 @@ export const CKTStyle = styled.section`
 `
 
 export const CIStyled = styled.article`
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: auto ;
     background-color: orange;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 5%;
 
     section{
         width: 100%;
         height: 20% !important;
+        margin: 5% 0;
         justify-content: space-between;
         background-color: cyan;
         img{
-            height: 90%;
+            max-width: 25%;
         }
 
         h6 {
@@ -118,6 +122,17 @@ export const CIStyled = styled.article`
 
         .price-parcel{
             background-color: red;
+        }
+    }
+
+    span{
+        max-height: 15%;
+        width: 50%;
+        right: 0;
+        justify-content: space-around;
+
+        button{
+            display: none;
         }
     }
 `
