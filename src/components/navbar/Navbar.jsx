@@ -6,7 +6,7 @@ import CartContext from '../contexts/cartAside/CartAsideContext'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { getTotals } from '../../store'
-import Logo from '../assets/img/Logo/logo.jpg'
+import Logo from '../assets/img/Logo/logo.png'
 
 export const Navbar = () => {
 

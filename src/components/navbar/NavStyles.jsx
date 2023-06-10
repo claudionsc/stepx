@@ -28,7 +28,9 @@ export const NavLogo = styled.div`
     }
 
     img{
-        max-width: 70%;
+        width: 70%;
+        mix-blend-mode: luminosity;
+
     }
 `
 
