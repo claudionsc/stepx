@@ -26,6 +26,10 @@ export const NavLogo = styled.div`
         font-size: 1.5rem;
         
     }
+
+    img{
+        max-width: 70%;
+    }
 `
 
 export const NavCart = styled.div`

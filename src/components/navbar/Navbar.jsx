@@ -6,6 +6,7 @@ import CartContext from '../contexts/cartAside/CartAsideContext'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { getTotals } from '../../store'
+import Logo from '../assets/img/Logo/logo.jpg'
 
 export const Navbar = () => {
 
@@ -22,25 +23,27 @@ export const Navbar = () => {
 
 
   return (
-      <NavDiv>
-        <NavLogo>
-          <a href="/"><TbShoe /></a>
-        </NavLogo>
-        <NavUl className="nav flex-row">
-          <li className="nav-item">
-            <a className="nav-link active" href="#shoes3d">Início</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#vendidos">Mais vendidos</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#produtos">Todos os produtos</a>
-          </li>
+    <NavDiv>
+      <NavLogo>
+        <a href="/">
+          <img src={Logo} />
+        </a>
+      </NavLogo>
+      <NavUl className="nav flex-row">
+        <li className="nav-item">
+          <a className="nav-link active" href="#shoes3d">Início</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#vendidos">Mais vendidos</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#produtos">Todos os produtos</a>
+        </li>
 
-        </NavUl>
-        <NavCart>
-          <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
-        </NavCart>
-      </NavDiv>
+      </NavUl>
+      <NavCart>
+        <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
+      </NavCart>
+    </NavDiv>
   )
 }

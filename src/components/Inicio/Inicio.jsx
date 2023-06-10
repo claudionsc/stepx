@@ -13,7 +13,7 @@ const Slide = () => {
 
   return (
     <S3DStyle >
-      <div id="shoes1" data-anime="show" >
+      <div id="shoes1" >
         {/* <Shoe /> */}
       </div>
     </S3DStyle>

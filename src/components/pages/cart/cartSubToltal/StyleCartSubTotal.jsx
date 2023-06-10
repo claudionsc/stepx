@@ -8,6 +8,7 @@ export const CSTStyle = styled.span`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #ffffffcd;
     
 
     button {

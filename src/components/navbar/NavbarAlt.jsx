@@ -15,7 +15,7 @@ export const NavbarAlt = (prop) => {
     <NALTStyle>
     <a onClick={prop.onClickAlt}>
       <MdArrowBackIosNew />
-      <p>Voltar pra home</p>
+      <p>Voltar</p>
     </a>
 
     <div className='navcart'>

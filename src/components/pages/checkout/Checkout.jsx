@@ -10,22 +10,28 @@ import { getTotals, getSubtotal } from '../../../store'
 import { CartWideItems } from '../cart/cartWide/CartWideItems'
 import { CartSubTotal } from '../cart/cartSubToltal/CartSubTotal'
 import { FinalCheckout } from './FinalCheckout'
+import { AiFillCloseCircle } from 'react-icons/ai'
+import { NavbarAlt } from '../../navbar/NavbarAlt'
+import { useNavigate } from 'react-router-dom'
+
 
 export const Checkout = () => {
+
+  const navigate = useNavigate()
 
   const checkoutItems = useSelector((state) => state.item.cartItems)
   const checkoutSubtotal = useSelector((state) => state.item.cartSubtotal)
 
-  const [name, setName] = useState('dnjfnajnvnperj');
-  const [phone, setPhone] = useState('dnjfnajnvnperj');
-  const [email, setEmail] = useState('dnjfnajnvnperj');
-  const [cpf, setCpf] = useState('dnjfnajnvnperj');
-  const [address, setAddress] = useState('dnjfnajnvnperj');
-  const [city, setCity] = useState('dnjfnajnvnperj');
-  const [country, setCountry] = useState('dnjfnajnvnperj');
-  const [card, setCard] = useState('dnjfnajnvnperj');
-  const [pix, setPix] = useState('dnjfnajnvnperj');
-  const [boleto, setBoleto] = useState('dnjfnajnvnperj');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [cpf, setCpf] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [payment, setPayment] = useState('')
+  const [disabledButton, setDisabledButton ] = useState(true)
+
 
   const [showPurchase, setShowPurchase] = useState(false)
 
@@ -50,15 +56,10 @@ export const Checkout = () => {
   const handleCountrySubmit = (e) => {
     setCountry(e.target.value)
   }
-  const handleCardSubmit = (e) => {
-    setCard(e.target.value)
+  const handlePaymentSubmit = (e) => {
+    setPayment(e.target.value)
   }
-  const handlePixSubmit = (e) => {
-    setPix(e.target.value)
-  }
-  const handleBoletoSubmit = (e) => {
-    setBoleto(e.target.value)
-  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -78,17 +79,18 @@ export const Checkout = () => {
 
   return (
     <main>
+      <NavbarAlt onClickAlt={() => navigate(-1)}/>
       <CKTStyle>
         <span id='dados-clientes'>
 
           <form action="" method="get" onSubmit={(e) => handleSubmit(e)}>
 
-            <div className="payment">
+            <div className="payment" onFocus={() => setDisabledButton(false)}>
               <h4>Forma de pagamento</h4>
 
               <div className="inputs">
                 <div className="opcao">
-                  <input value="cartão" type="radio" name="pagamento" id="cartao" onChange={(e) => handleCardSubmit(e)} />
+                  <input value="cartão" type="radio" name="pagamento" id="cartao" onChange={(e) => handlePaymentSubmit(e)} />
                   <label htmlFor="cartao">
                     <p>Cartão</p>
                     <BsCreditCard2Back />
@@ -96,7 +98,7 @@ export const Checkout = () => {
 
                 </div>
                 <div className="opcao">
-                  <input value="pix" type="radio" name="pagamento" id="pix" onChange={(e) => handlePixSubmit(e)} />
+                  <input value="pix" type="radio" name="pagamento" id="pix" onChange={(e) => handlePaymentSubmit(e)} />
                   <label htmlFor="pix">
                     <p>Pix</p>
                     <MdOutlinePix />
@@ -104,7 +106,7 @@ export const Checkout = () => {
                 </div>
 
                 <div className="opcao">
-                  <input value="boleto" type="radio" name="pagamento" id="boleto" onChange={(e) => handleBoletoSubmit(e)} />
+                  <input value="boleto" type="radio" name="pagamento" id="boleto" onChange={(e) => handlePaymentSubmit(e)} />
                   <label htmlFor="boleto">
                     <p>Boleto</p>
                     <RiBillLine />
@@ -123,13 +125,14 @@ export const Checkout = () => {
             <input type="text" placeholder='Cidade' name="cidade" required onChange={(e) => handleCitySubmit(e)} />
             <input type="text" placeholder='País' name="pais" required onChange={(e) => handleCountrySubmit(e)} />
 
-            <Button addcart={"Finalizar compra"} type={"submit"} />
+            <Button disabled={disabledButton} addcart={"Finalizar compra"} type={"submit"} />
           </form>
 
         </span>
 
         <section>
           <CIStyled>
+
 
             <h3>Resumo dos pedidos</h3>
             {checkoutItems.map((item) => (
@@ -152,23 +155,36 @@ export const Checkout = () => {
 
       </CKTStyle>
 
-      <FinalCheckout>
-      {checkoutItems.map((item) => (
-        <>
-          <CartWideItems
-            key={item.id}
-            title={`
-            ${item.nome}. \n
-            Tamanho(s): ${item.size}
-            `}
-            priceUni={`R$ ${item.preco}`}
-            />
-      </>
-        ))
+      {showPurchase === true &&
+
+        <FinalCheckout>
+          <AiFillCloseCircle onClick={() => setShowPurchase(false)} />
+
+          {checkoutItems.map((item) => (
+            <>
+              <CartWideItems
+                key={item.id}
+                title={`
+              ${item.nome}. \n
+              Tamanho(s): ${item.size}
+              `}
+                priceUni={`R$ ${item.preco}`}
+              
+              />
+            </>
+          ))
+          }
+
+          <div className="data">
+            <p>Nome: {name}</p>
+            <p>Email: {email}</p>
+            <p>Telefone: {phone}</p>
+            <p>Endereço: {address}</p>
+            <p>Forma de pagamento: {payment}</p>
+          </div>
+        </FinalCheckout>
       }
-        <p>Teste</p>
-      </FinalCheckout>
-     
+
     </main>
   )
 }

@@ -9,6 +9,8 @@ export const CWStyle = styled.main`
     justify-content: center;
     margin: 0 auto;
 
+   
+
     & section {
         width: 100%;
         height: 50% !important;
@@ -18,6 +20,8 @@ export const CWStyle = styled.main`
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+
+        
 
         img{
             width: 60%;

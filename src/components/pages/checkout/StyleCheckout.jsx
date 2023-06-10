@@ -8,37 +8,47 @@ export const CKTStyle = styled.section`
     grid-column-gap: 10px;
     grid-row-gap: 0px;
 
+    button{
+        :disabled{
+        cursor: not-allowed;
+
+        }
+    }
+
     span{
         width: 100%;
-        height: 90vh;
-        background-color: yellow;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #f0efef;
+
 
         form{
             width: 90%;
             height: 90%;
             margin: 0 auto;
-            background-color: orangered;
 
             input{
                 width: 80%;
                 height: 3%;
-
                 border: 2px solid grey;
                 outline: none;
                 padding: 1em;
 
                 :focus{
-                    border-radius: 10px;
-                    border: 4px solid grey;
+                    border-radius: 5px;
+                    
                 }
             }
 
             .payment{
                 width: 45%;
-                height: 30%;
-                border: 2px solid gray;
+                height: 25%;
+                border: 2px solid #e4e3e3;
                 border-radius: 5px;
-                margin: 5px 0;
+                margin: 20px 0;
+                background-color: #ececec;
+                padding: 0 10px;
 
                 .inputs{
                     display: flex;
@@ -75,7 +85,6 @@ export const CKTStyle = styled.section`
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    /* justify-content: center; */
                     background-color: white;
                     border-radius: 5px;
                     padding: 5px 0;
@@ -92,7 +101,6 @@ export const CKTStyle = styled.section`
         }
     }
                 p, h4{
-                    /* padding: 5px 0; */
                     margin: 10px 0;
                 }
     
@@ -100,28 +108,29 @@ export const CKTStyle = styled.section`
 
 export const CIStyled = styled.article`
     width: 70%;
-    height: auto ;
-    background-color: orange;
+    height: 50vh;
+    background-color: #ececec;
     border: 2px solid grey;
     border-radius: 5px;
     padding: 5%;
+    overflow-y: scroll;
 
     section{
         width: 100%;
         height: 20% !important;
         margin: 5% 0;
-        justify-content: space-between;
-        background-color: cyan;
+        justify-content: flex-start;
+        background-color: white;
         img{
-            max-width: 25%;
+            max-width: 5vw;
         }
 
         h6 {
-            font-size: 1rem;
+            font-size: .8rem;
         }
 
         .price-parcel{
-            background-color: red;
+           display: none;
         }
     }
 
