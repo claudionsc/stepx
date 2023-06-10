@@ -6,7 +6,7 @@ export const WStyle = styled.footer`
     position: fixed;
     bottom: 0;
     left: 50%;
-    background: rgba( 255, 255, 255, 0.1 );
+    background: rgba( 255, 255, 255, 0.4 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 9.5px );
     -webkit-backdrop-filter: blur( 9.5px );
@@ -15,10 +15,13 @@ export const WStyle = styled.footer`
     transform: translate(-50%, 0%);
     text-align: center;
     animation: animation 10s normal ease-in-out;
-   
+    padding: 0 20px;
+  
 
-    h3, p{
+    h4, p{
         font-size: .7rem;
+
+        color: purple;
     }
 
     .contatos{
@@ -29,7 +32,7 @@ export const WStyle = styled.footer`
         
         svg{
             margin: 0 20px;
-
+            fill: purple;
         }
     }
     .close{

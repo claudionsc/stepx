@@ -46,6 +46,7 @@ section {
     height: 100%;
     animation: zoomAnimation 20s infinite ease-in-out;
     overflow: hidden;
+    filter: invert(1);
 
   }
 

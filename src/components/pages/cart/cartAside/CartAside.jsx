@@ -12,10 +12,11 @@ import { Link } from 'react-router-dom'
 export const CartAside = (props) => {
 
   const { cart, setCart } = useContext(CartAsideContext);
+  const dispatch = useDispatch()
 
   const cartI = useSelector((state) => state.item.cartItems)
   const cartItems = useSelector((state) => state.item)
-  const dispatch = useDispatch()
+
 
   const handleAddItems = (cartItems) => {
     dispatch(showItems(cartItems))

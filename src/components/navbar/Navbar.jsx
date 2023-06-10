@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { NavLogo, NavDiv, NavCart, NavUl } from './NavStyles'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { TbShoe } from 'react-icons/tb'
 import CartContext from '../contexts/cartAside/CartAsideContext'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
@@ -10,11 +9,14 @@ import Logo from '../assets/img/Logo/logo.png'
 
 export const Navbar = () => {
 
+  const dispatch = useDispatch()
+
   const { cart, setCart } = useContext(CartContext);
 
   const cartItems = useSelector((state) => state.cartItems)
+
   const cartQtd = useSelector((state) => state.item.cartTotal)
-  const dispatch = useDispatch()
+
 
   useEffect(() => {
     dispatch(getTotals())

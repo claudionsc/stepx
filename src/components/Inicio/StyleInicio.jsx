@@ -17,7 +17,7 @@ export const S3DStyle = styled.div`
         top: 50%;
         transform: translate(0%, -50%);
         margin-left: 2%;
-        animation: fadeIn 2s normal ease-in-out;
+        animation: fadeIn 1s normal linear;
 
         
       
@@ -30,7 +30,14 @@ export const S3DStyle = styled.div`
         }
 
         h1, h6{
-            animation: gradientAnimation 10s infinite ease-in-out;
+            background-clip: text;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            background-image: -webkit-linear-gradient(202deg, rgba(6,0,109,1) 0%, rgba(9,9,121,1) 24%, rgba(244,0,255,1) 53%, rgba(0,212,255,1) 97%);
+            color: black;
+            animation: gradientAnimation 10s infinite linear;
+            background-size: 200% 200%;
+
         }
 
         @keyframes fadeIn {
@@ -40,10 +47,9 @@ export const S3DStyle = styled.div`
                 transform: translate(-100%, -50%);
                 
             }
-            25%{
+            75%{
                 display: inline-block;
                 opacity: 0;
-                transform: translate(-50%, -50%);
                 
             }
             100%{
@@ -54,20 +60,23 @@ export const S3DStyle = styled.div`
 
         @keyframes gradientAnimation
         {
-            from{
-                background-clip: text;
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        background-image: -webkit-linear-gradient(202deg, rgba(6,0,109,1) 0%, rgba(9,9,121,1) 24%, rgba(244,0,255,1) 53%, rgba(0,212,255,1) 97%);
-        color: black;
+            0%{
+                background-position: 0 0;
             }
 
-            to{
-        background: linear-gradient(43deg, rgba(6,0,109,1) 0%, rgba(9,9,121,1) 24%, rgba(244,0,255,1) 53%, rgba(0,212,255,1) 97%);
-        background-clip: text;
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        color: black;
+            25%{
+             
+                background-position: 0 100%;
+            }
+            50%{
+                background-position: 100% 100%;
+            }
+            75%{
+                background-position: 100% 0;
+            }
+
+            100%{
+                background-position: 0 0;
             }
         }
        
@@ -83,5 +92,7 @@ export const S3DStyle = styled.div`
         top: 0%;
 
     }
+
+   
    
 `

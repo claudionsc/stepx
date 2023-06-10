@@ -12,7 +12,7 @@ import { CartSubTotal } from '../cart/cartSubToltal/CartSubTotal'
 import { FinalCheckout } from './FinalCheckout'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { NavbarAlt } from '../../navbar/NavbarAlt'
-import { useNavigate } from 'react-router-dom'
+import  { useNavigate } from 'react-router-dom'
 
 
 export const Checkout = () => {
@@ -134,6 +134,7 @@ export const Checkout = () => {
           <CIStyled>
 
 
+
             <h3>Resumo dos pedidos</h3>
             {checkoutItems.map((item) => (
 
@@ -158,6 +159,7 @@ export const Checkout = () => {
       {showPurchase === true &&
 
         <FinalCheckout>
+          
           <AiFillCloseCircle onClick={() => setShowPurchase(false)} />
 
           {checkoutItems.map((item) => (

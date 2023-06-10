@@ -10,13 +10,9 @@ import { NavbarAlt } from '../../navbar/NavbarAlt'
 import { useDispatch, useSelector } from 'react-redux'
 import { addSizeToProduct, showItems } from '../../../store'
 import { useLocation, useNavigate } from "react-router-dom";
-import SizeToCart from '../../contexts/sizesToCart/SizesToCart'
 
 export const Product = () => {
 
-  
-  
-  
   const routePath = useLocation();
   const onTop = () => {
     window.scrollTo(0, 0);
@@ -29,11 +25,13 @@ export const Product = () => {
 
   const dispatch = useDispatch()
   const product = useSelector((state) => state.product.product)
-  const cartQtd = useSelector((state) => state.item)
+  const cartQtd = localStorage.getItem("cartTotal")
+  console.log(cartQtd)
+
 
   const handleAddCart = (item) => {
-
     dispatch(showItems(item))
+    setCart(true)
   }
 
   const navigate = useNavigate()
@@ -44,22 +42,16 @@ export const Product = () => {
   const [showSize, setShowSize] = useState()
 
   const setSizeToCart = (item) => {
-
     setShowSize(item)
-    
     dispatch(addSizeToProduct(item))
   } 
-
-
-  
-
 
   return (
     <PDStyle>
       <NavbarAlt onClickAlt={() => navigate(-1)}
         cart={
           <NavCart>
-            <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd.cartTotal}</p><AiOutlineShoppingCart /></a>
+            <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
           </NavCart>
         } />
 
