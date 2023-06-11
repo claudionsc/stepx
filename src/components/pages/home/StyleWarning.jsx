@@ -59,4 +59,8 @@ export const WStyle = styled.footer`
             opacity: 100%;
         }
     }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        height: 10vh;
+    }
 `

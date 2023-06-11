@@ -93,6 +93,18 @@ export const S3DStyle = styled.div`
 
     }
 
-   
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        .home-title{
+            width: 100vw;
+            height: 20vh;
+        }
+
+        #shoes1{
+            .shoe{
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    }
    
 `

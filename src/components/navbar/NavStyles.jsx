@@ -16,8 +16,11 @@ export const NavDiv = styled.div`
     }
    
 
-    @media screen and (min-width: 767px) /*and (max-width: 1023px)*/{
+    @media screen and (min-width: 767px) and (max-width: 1023px){
 
+        svg{
+            font-size: 5rem;
+        }
     
         
         .none{
@@ -34,9 +37,15 @@ export const NavDiv = styled.div`
         bottom: 0;
         right: 0;
         height: 92vh;
+        width: 50vw;
+
         li{
             margin: 5%;
+            a{
+                font-size: 350%;
+            }
         }
+
     }
 
         div .hamb-menu{
@@ -74,7 +83,6 @@ export const NavCart = styled.div`
     align-items: flex-end;
     justify-content: space-around;
     cursor: pointer;
-    background-color: red;
     
   
 
@@ -98,8 +106,8 @@ export const NavCart = styled.div`
 
 
     
-    & svg {
-        font-size: 24px;
+    svg {
+        font-size: 1.5rem;
         
     }
 

@@ -15,17 +15,30 @@ export function Sneaker(props) {
   
   const ref = useRef()
   const { nodes, materials } = useGLTF('/sneaker-transformed.glb')
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime()
-    ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8)
 
-    ref.current.position.y = (1 + Math.cos(t / 4)) / 7
-    ref.current.position.x = (1 + Math.sin(t / 3)) / 4
+  let scale = 0.03
+  
+  useFrame((state) => {
+    if(window.screen.width <= 767){
+      ref.current.rotation.set(0, 0, 0)
+      ref.current.position.y = 0
+      ref.current.position.x = 0
+
+      scale = 0.01
+    }else{
+      const t = state.clock.getElapsedTime()
+
+
+      ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8)
+      ref.current.position.y = (1 + Math.cos(t / 4)) / 7
+      ref.current.position.x = (1 + Math.sin(t / 3)) / 4
+    }
+
   })
   
   return (
     <group ref={ref} {...props} dispose={null}>
-      <group scale={0.03}>
+      <group scale={scale}>
         <group rotation={[-Math.PI / 2, 0, -Math.PI]} scale={[-0.5, 0.5, 0.5]}>
           <group rotation={[-0.4, 0, -2.6]} scale={[-2.02, 2.02, 2.02]}>
             <mesh geometry={nodes.nikeAF1_L_RS_Material_8_0.geometry} material={materials.RS_Material_8} />

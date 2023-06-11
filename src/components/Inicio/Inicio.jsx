@@ -10,12 +10,12 @@ const Inicio = () => {
   return (
     <S3DStyle >
       <div className="home-title">
-        {/* <h1>STEPX</h1>
-        <h6>MOVE ON</h6> */}
+        <h1>STEPX</h1>
+        <h6>MOVE ON</h6>
       </div>
       
       <div id="shoes1" >
-        {/* <Shoe /> */}
+        {/* <Shoe  /> */}
       </div>
     </S3DStyle>
   )
