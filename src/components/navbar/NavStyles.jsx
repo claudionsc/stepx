@@ -10,60 +10,100 @@ export const NavDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+
+   ul{
+        flex-direction: row;
+    }
+   
+
+    @media screen and (min-width: 767px) /*and (max-width: 1023px)*/{
+
+    
+        
+        .none{
+            display: none;
+        }
+        .inline{
+            display: inline-block;
+        }
+
+       ul{
+        flex-direction: column;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 92vh;
+        li{
+            margin: 5%;
+        }
+    }
+
+        div .hamb-menu{
+            display: inline-block;
+        }
+        
+    }
+
+    
     
 `
 
 export const NavLogo = styled.div`
-    width: 10%;
     height: 100%;
+    aspect-ratio: 4/3;
     margin: 0 10px;
     text-align: center;
     display: grid;
     place-items: center;
     cursor: pointer;
 
-    & svg {
-        font-size: 1.5rem;
-        
-    }
-
     img{
-        width: 70%;
-        mix-blend-mode: luminosity;
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: contain;
 
     }
 `
 
 export const NavCart = styled.div`
-    width: 10%;
-    height: 100%;
-    margin: 0 10px;
+    height: 40px;
+    aspect-ratio: 4/1;
     text-align: center;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
     cursor: pointer;
+    background-color: red;
+    
+  
+
+    .hamb-menu{
+        display: none;
+    }
 
     p{
         height: auto;
-        position: absolute;
-        right: 4.2%;
-        top: 15%;
-        padding: 2px 5px;
+        position: relative;
+        right: -50%;
+        top: 10px;
         border-radius: 50%;
         background-color: #ff0000;
         color: white;
         font-size: .7rem;
-        max-width: 30px;
-        max-height: 30px;
+        width: 16px;
+        height: 16px;
         text-decoration: none;
     }
 
 
     
     & svg {
-        font-size: 1.5rem !important;
+        font-size: 24px;
         
     }
+
+  
 `
 
 export const NALTStyle = styled.nav`
@@ -106,5 +146,7 @@ export const NavUl = styled.ul`
     list-style: none;
     display: flex;
     justify-self: center;
+
+   
 `
 
