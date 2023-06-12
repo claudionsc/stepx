@@ -12,7 +12,6 @@ import { Home } from './components/pages/home/Home';
 import { CartWide } from './components/pages/cart/cartWide/CartWide';
 import { Checkout } from './components/pages/checkout/Checkout';
 
-
 function ProductUrl() {
   let { id } = useParams();
 }
@@ -30,7 +29,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: `/:id`,
+        path: "/:id",
         element: <Product />
       },
       {

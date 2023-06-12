@@ -78,7 +78,6 @@ section {
     margin: 50px;
 }
 
-
 .vendidos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -90,13 +89,18 @@ section {
     
 }
 
-
  #produtos {
     justify-content: start;
     align-items: start;
     height: auto !important;
     padding-top: 8vh;
     width: 100vw;
+
+    .false{
+        display: none;
+    }
+
+      
 }
 
 
@@ -108,8 +112,115 @@ section {
     grid-row-gap: 20px;
     padding: 20px 0;
 
-   & .false{
-     display: none;
-    }
+    
+}
    
+@media screen and (min-width: 767px) and (max-width: 1023px){
+
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /* height: 100vh !important; */
+        /* position: static; */
+
+    }
+    .none{
+        display: inline;
+    }
+
+    #shoes3d{
+        height: 100vh !important;
+    }
+
+    #vendidos{
+        align-items: center;
+        height: auto !important;
+        
+    }
+
+    .vendidos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .vendidos span, .vendidos span img{
+     width: 30vw;
+    }
+
+    .vendidos span button {
+        width: 30vw;
+        height: 3vh;
+       
+
+    }
+
+    span h5{
+        font-size: 1.5rem;
+    }
+
+    #produtos{
+        & .hide{
+            background-color: white;
+            width: 100vw;
+            height: 5vh;
+            position: sticky;
+            top: 8%;
+    
+            & svg{
+                font-size: 3rem;
+            }
+    
+               & span{
+                    display: none;
+                }
+            }
+    }
+
+    .products-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+        padding: 20px 0;
+        width: 100vw;
+
+        & span{
+            width: 50vw;
+            aspect-ratio: 9/16;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            & img{
+                width: 50vw;
+                object-fit: contain;
+                aspect-ratio: 9/16;
+        
+            }
+            
+             & .desc-product-home{
+                margin: 0 auto;
+                text-align: center;
+
+                & h5{
+                    font-size: 2rem;
+                }
+
+                & p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    
+        
+    }
+    
 }

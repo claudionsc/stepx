@@ -19,7 +19,12 @@ export const NavDiv = styled.div`
     @media screen and (min-width: 767px) and (max-width: 1023px){
 
         svg{
-            font-size: 5rem;
+            font-size: 3rem !important;
+        }
+        
+        p{
+            /* font-size: 2rem !important; */
+            background-color: #0004ff;
         }
     
         
@@ -147,6 +152,18 @@ export const NALTStyle = styled.nav`
             width: 40%;
             height: 40%;
         }       
+
+        @media screen and (min-width: 767px) and (max-width: 1023px){
+            height: 5vh;
+
+            p{
+                font-size: 2.5rem;
+            }
+
+            & svg{
+                font-size: 3rem;
+            }
+        }
     
 `
 export const NavUl = styled.ul`

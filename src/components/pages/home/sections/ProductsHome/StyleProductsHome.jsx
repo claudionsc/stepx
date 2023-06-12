@@ -7,9 +7,6 @@ export const PHStyled = styled.span`
     flex-direction: column;
     margin-top: 10%;
 
-
-    
-
     & img{
         width: 20vw;
         object-fit: contain;

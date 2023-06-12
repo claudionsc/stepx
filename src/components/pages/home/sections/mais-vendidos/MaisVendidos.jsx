@@ -5,7 +5,7 @@ import { Button } from '../../../../Button/Button.jsx'
 
 export const MaisVendidos = (props) => {
   return (
-    <MVStyled  >
+    <MVStyled>
       <img src={props.img} alt={props.alt} />
       <h5>{props.nome}</h5>
       <p>{props.preço}</p>

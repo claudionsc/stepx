@@ -96,6 +96,11 @@ export const CartAsideContainer = styled.aside`
         place-items: center;
         height: 5%;
     }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        width: 60vw;
+        background-color: red;
+    }
 `
 
 export const StyleCartAsideItems =  styled.div`

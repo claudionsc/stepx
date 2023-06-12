@@ -70,6 +70,9 @@ export const Home = () => {
       <section id='produtos'>
         <HomeFilters />
         <article className='products-items'>
+
+          
+          
           {List.map(item => {
 
             let hasSizes = item.tamanhos.includes(size)

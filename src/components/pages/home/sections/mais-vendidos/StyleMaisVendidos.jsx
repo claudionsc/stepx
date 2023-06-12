@@ -5,6 +5,7 @@ export const MVStyled = styled.span`
     width: 20vw;
     object-fit: contain;
     
+    
 
     & img {
             aspect-ratio: 9/16;
@@ -13,13 +14,11 @@ export const MVStyled = styled.span`
         }
 
     button {
-        
         background-color: black;
         color: white;
         height: 6%;
         margin: 15px 0;
 
-       
     }
 
     

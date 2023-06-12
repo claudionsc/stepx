@@ -26,7 +26,6 @@ export const Product = () => {
   const dispatch = useDispatch()
   const product = useSelector((state) => state.product.product)
   const cartQtd = localStorage.getItem("cartTotal")
-  console.log(cartQtd)
 
 
   const handleAddCart = (item) => {
@@ -35,53 +34,55 @@ export const Product = () => {
   }
 
   const navigate = useNavigate()
-  
-  
-  const [disabledButton, setDisabledButton ] = useState(true)
+
+
+  const [disabledButton, setDisabledButton] = useState(true)
 
   const [showSize, setShowSize] = useState()
 
   const setSizeToCart = (item) => {
     setShowSize(item)
     dispatch(addSizeToProduct(item))
-  } 
+  }
 
   return (
-    <PDStyle>
-      <NavbarAlt onClickAlt={() => navigate(-1)}
-        cart={
-          <NavCart>
-            <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
-          </NavCart>
-        } />
+    
+    <PDStyle >
 
-      <section id='product' sizeToCart={'teste'}  >
-        <span className='product-img'>
-          <img src={product.img.img01} alt={product.key} />
-          <img src={product.img.img02} alt={product.key} />
-          <img src={product.img.img03} alt={product.key} />
-          <img src={product.img.img04} alt={product.key} />
-        </span>
-        <span className="product-desc">
-          <div className="desc">
-            <h1>{product.nome}</h1>
-            <p> </p>
-            <p>{`R$ ${product.preco}`}</p>
-            <p>{`Escolha o seu tamanho: `}</p>
-            <h3>{showSize}</h3>
+        <NavbarAlt onClickAlt={() => navigate(-1)}
+          cart={
+            <NavCart>
+              <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
+            </NavCart>
+          } />
 
-            <Tamanhos onFocus={() => setDisabledButton(false)} sizes={product.tamanhos.map((item) => {
-              return <button onClick={() => setSizeToCart(item)} className="tamanhos-btn" key={item} >{item}</button>
-            })} />
+        <section id='product' sizeToCart={'teste'}  >
+          <span className='product-img'>
+            <img src={product.img.img01} alt={product.key} />
+            <img src={product.img.img02} alt={product.key} />
+            <img src={product.img.img03} alt={product.key} />
+            <img src={product.img.img04} alt={product.key} />
+          </span>
+          <span className="product-desc">
+            <div className="desc">
+              <h1>{product.nome}</h1>
+              <p> </p>
+              <p>{`R$ ${product.preco}`}</p>
+              <p>{`Escolha o seu tamanho: `}</p>
+              <h3>{showSize}</h3>
 
-            <Button disabled={disabledButton} onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
-          </div>
+              <Tamanhos onFocus={() => setDisabledButton(false)} sizes={product.tamanhos.map((item) => {
+                return <button onClick={() => setSizeToCart(item)} className="tamanhos-btn" key={item} >{item}</button>
+              })} />
+
+              <Button disabled={disabledButton} onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
+            </div>
 
 
-        </span>
-      </section>
+          </span>
+        </section>
 
-      {cart === true && <CartAside />}
+        {cart === true && <CartAside />}
     </PDStyle>
   )
 }
