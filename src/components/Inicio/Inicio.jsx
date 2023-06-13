@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { S3DStyle } from './StyleInicio'
 import { Shoe } from '../shoes/Shoe'
 

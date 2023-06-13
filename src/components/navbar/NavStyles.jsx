@@ -41,10 +41,11 @@ export const NavDiv = styled.div`
         flex-direction: column;
         background-color: white;
         position: fixed;
-        bottom: 0;
+        top: 0;
         right: 0;
-        height: 92vh;
+        height: 100vh;
         width: 50vw;
+        margin-top: 9vh;
 
         li{
             margin: 5%;

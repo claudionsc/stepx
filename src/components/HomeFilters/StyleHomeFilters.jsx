@@ -77,10 +77,9 @@ export const HFStyle = styled.aside`
 
         svg{
             display: inline;
-            font-size: 2rem;
+            font-size: 2.5rem;
             position: absolute;
-            right: 0;
-            padding: 1%;
+            right: 5%;
         }
         
     }

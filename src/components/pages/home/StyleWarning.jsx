@@ -62,5 +62,16 @@ export const WStyle = styled.footer`
 
     @media screen and (min-width: 767px) and (max-width: 1023px){
         height: 10vh;
+        width: 90vw;
+
+        h4{
+            font-size: 2rem;
+        }
+
+        p, svg{
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+       
     }
 `

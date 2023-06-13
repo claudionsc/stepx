@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const PDStyle = styled.span`
-    background-color: red;
-    width: 100vmax;
+    width: 100vw;
 
 #product{
     width: 100%;

@@ -20,19 +20,15 @@ export function Sneaker(props) {
   
   useFrame((state) => {
     if(window.screen.width <= 767){
-      ref.current.rotation.set(0, 0, 0)
-      ref.current.position.y = 0
-      ref.current.position.x = 0
-
       scale = 0.01
-    }else{
-      const t = state.clock.getElapsedTime()
-
-
-      ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8)
-      ref.current.position.y = (1 + Math.cos(t / 4)) / 7
-      ref.current.position.x = (1 + Math.sin(t / 3)) / 4
     }
+
+    const t = state.clock.getElapsedTime()
+
+
+    ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8);
+    ref.current.position.y = (1 + Math.cos(t / 4)) / 7;
+    ref.current.position.x = (1 + Math.sin(t / 3)) / 4
 
   })
   
