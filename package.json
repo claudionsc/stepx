@@ -2,6 +2,7 @@
   "name": "the-x-shop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://claudionsc.github.io/stepx",
   "dependencies": {
     "@react-spring/web": "9.7.1",
     "@react-three/drei": "9.57.3",

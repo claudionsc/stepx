@@ -15,6 +15,7 @@ export const PDStyle = styled.span`
         grid-row-gap: 5px;
         width: 50vw;
         margin-right: 20px;
+        background-color: red;
 
             & img {
             width: 100%;

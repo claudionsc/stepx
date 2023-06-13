@@ -9,7 +9,7 @@ export const NavDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 
    ul{
         flex-direction: row;

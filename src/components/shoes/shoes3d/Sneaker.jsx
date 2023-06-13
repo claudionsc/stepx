@@ -14,7 +14,7 @@ import { useFrame } from '@react-three/fiber'
 export function Sneaker(props) {
   
   const ref = useRef()
-  const { nodes, materials } = useGLTF('/sneaker-transformed.glb')
+  const { nodes, materials } = useGLTF('/stepx/sneaker-transformed.glb')
 
   let scale = 0.03
   
@@ -55,4 +55,4 @@ export function Sneaker(props) {
   )
 }
 
-useGLTF.preload('/sneaker-transformed.glb')
+useGLTF.preload('/stepx/sneaker-transformed.glb')

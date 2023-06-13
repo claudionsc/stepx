@@ -60,7 +60,7 @@ export const HFStyle = styled.aside`
         bottom: 0;
 
         p{
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         h6{
@@ -79,7 +79,8 @@ export const HFStyle = styled.aside`
             display: inline;
             font-size: 2.5rem;
             position: absolute;
-            right: 5%;
+            right: 0%;
+            margin: 5px;
         }
         
     }

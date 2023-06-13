@@ -52,7 +52,7 @@ export const Product = () => {
         <NavbarAlt onClickAlt={() => navigate(-1)}
           cart={
             <NavCart>
-              <a onClick={() => setCart(true)}><p className='cartQtd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
+              <a onClick={() => setCart(true)}><p className='cartQtdPd'>{cartQtd}</p><AiOutlineShoppingCart /></a>
             </NavCart>
           } />
 

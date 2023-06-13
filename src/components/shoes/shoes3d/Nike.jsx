@@ -13,7 +13,7 @@ Title: Nike Air Zoom Pegasus 36
 
 export function Nike(props) {
     const ref = useRef()
-    const { nodes, materials } = useGLTF('/nike_air_zoom_pegasus_36.glb')
+    const { nodes, materials } = useGLTF('/stepx/nike_air_zoom_pegasus_36.glb')
     useFrame((state) => {
       const t = state.clock.getElapsedTime()
       ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 3) / 4, 0.15 + Math.sin(t / 2) / 8)
@@ -26,4 +26,4 @@ export function Nike(props) {
     )
   }
   
-  useGLTF.preload('/nike_air_zoom_pegasus_36-transformed.glb')
+  useGLTF.preload('/stepx/nike_air_zoom_pegasus_36-transformed.glb')

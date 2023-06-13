@@ -32,7 +32,7 @@ export const Navbar = () => {
   return (
     <NavDiv>
       <NavLogo>
-        <a href="/">
+        <a href="/stepx/">
           <img src={Logo} />
         </a>
       </NavLogo>

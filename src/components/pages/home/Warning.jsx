@@ -9,8 +9,8 @@ export const Warning = ({children}) => {
     <WStyle>
       <span>
         <h4>Atenção</h4>
-        <p>Esta aplicação é uma simulação de um ecommerce, portando <strong>não</strong> se trada de um ecommerce real. </p>
-        <p>As imagens aqui mostradas são de propriedade da Nike, Adidas, Lacoste, Yeezy, New Balance e Fila, e seu uso nesse projeto é apenas para simular produtos de um ecommerce.</p>
+        <p>Esta aplicação é uma simulação de um ecommerce, portando <strong>não</strong> se trata de um ecommerce real. </p>
+        <p>As imagens aqui mostradas são de propriedade da Nike, Adidas, Lacoste, Yeezy, New Balance e Fila, usadas aqui para simular produtos de um ecommerce.</p>
         <p>Caso queira saber mais sobre o desenvolvedor desse projeto, visite:</p>
 
         <div className="contatos">

@@ -52,7 +52,7 @@ export const CartWide = () => {
       {cartI?.length === 0 ? (
         <div className='carrinho-vazio'>
           <h5>Seu carrinho está vazio</h5>
-          <Link to={'/'}><p>Comece a comprar</p></Link> 
+          <Link to={'/stepx/'}><p>Comece a comprar</p></Link> 
         </div>
       ) : (
         <>

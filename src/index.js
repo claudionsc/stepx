@@ -21,27 +21,27 @@ function ProductUrl() {
 const router = createBrowserRouter([
 
   {
-    path: "/",
+    path: "/stepx/",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/stepx/",
         element: <Home />
       },
       {
-        path: "/:id",
+        path: "/stepx/:id",
         element: <Product />
       },
       {
-        path: "/cart",
+        path: "/stepx/cart",
         element: <CartWide />
       },
       {
-        path: "/checkout",
+        path: "/stepx/checkout",
         element: <Checkout />
       },
       {
-        path: "/login",
+        path: "/stepx/login",
         element: <CartWide />
       },
       

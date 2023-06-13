@@ -60,10 +60,10 @@ export const Home = () => {
 
       <section id='vendidos'>
         <main className='vendidos'>
-          <MaisVendidos verPag={() => seePag(List[0])} nome={List[0].nome} img={List[0].img.img01} Link={`/${List[0].key}`} />
-          <MaisVendidos verPag={() => seePag(List[6])} nome={List[6].nome} img={List[6].img.img01} Link={`/${List[6].key}`} />
-          <MaisVendidos verPag={() => seePag(List[7])} nome={List[7].nome} img={List[7].img.img01} Link={`/${List[7].key}`} />
-          <MaisVendidos verPag={() => seePag(List[8])} nome={List[8].nome} img={List[8].img.img01} Link={`/${List[8].key}`} />
+          <MaisVendidos verPag={() => seePag(List[0])} nome={List[0].nome} img={List[0].img.img01} Link={`/stepx/${List[0].key}`} />
+          <MaisVendidos verPag={() => seePag(List[6])} nome={List[6].nome} img={List[6].img.img01} Link={`/stepx/${List[6].key}`} />
+          <MaisVendidos verPag={() => seePag(List[7])} nome={List[7].nome} img={List[7].img.img01} Link={`/stepx/${List[7].key}`} />
+          <MaisVendidos verPag={() => seePag(List[8])} nome={List[8].nome} img={List[8].img.img01} Link={`/stepx/${List[8].key}`} />
         </main>
       </section>
 
@@ -101,7 +101,7 @@ export const Home = () => {
               nome={item.nome}
               preco={`R$ ${item.preco}`}
               img={item.img.img01}
-              link={`/${item.key}`}
+              link={`/stepx/${item.key}`}
               sizeToCart={'teste'}
               verPag={() => seePag(item)}
             />

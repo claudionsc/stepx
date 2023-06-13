@@ -71,7 +71,7 @@ export const CartAside = (props) => {
             </div>
             
             <div className='cart-summary'>
-              <Link to={'/cart'}>
+              <Link to={'/stepx/cart'}>
                 <Button className='see-cart' addcart='Ver carrinho completo' />
               </Link>
               <Button addcart='Limpar carrinho' onClick={() => handleCleanCart(cartItems)} />
