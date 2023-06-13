@@ -99,7 +99,34 @@ export const CartAsideContainer = styled.aside`
 
     @media screen and (min-width: 767px) and (max-width: 1023px){
         width: 60vw;
-        background-color: red;
+
+        & svg{
+            font-size: 4rem;
+        }
+
+        h3, p{
+            font-size: 2.5rem;
+        }
+
+        &  form {
+           height: 2vh;
+
+           input{
+            font-size: 2rem;
+           }
+
+           label{
+            font-size: 1.5rem;
+            font-weight: bold;
+           }
+           
+        }
+        &  .cart-items-div  .cart-summary{
+
+          &  a p {
+                font-size: 2.5rem !important;
+            }
+        }
     }
 `
 
@@ -127,6 +154,30 @@ export const StyleCartAsideItems =  styled.div`
         font-size: .8rem;
     }
 
-    
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        height: 20vh;
+        display: flex;
+       
+        
+
+        & img{
+            width: 40%;
+            
+        }
+
+        
+
+       & h5{
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+       & p{
+            font-size: 1.5rem !important;
+        }
+
+      
+    }
+
     
 `

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const PDStyle = styled.span`
+    background-color: red;
+    width: 100vmax;
 
 #product{
     width: 100%;
@@ -99,27 +101,6 @@ cursor: pointer;
 
     }
 }
- 
-@media (max-width: 767px) {
 
-    main{
-        background-color: green;
-        /* width: ; */
-    }
-
-    
-       .product-img{
-        width: 400%;
-        background-color: red;
-
-        img{
-            width: 1500%;
-        }
-       }
-    
-
-     
-    
-}
 
 `   

@@ -16,5 +16,15 @@ export const CSTStyle = styled.span`
         width: 15vw;
     }
     
-    
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        width: 90%;
+
+        font-size: 2rem;
+
+        button{
+            width: 30vw;
+
+            font-size: 2rem;
+        }
+    }
 `

@@ -57,15 +57,19 @@ export const CartAside = (props) => {
                     img={cartItem.img.img01}
                     title={cartItem.nome}
                     price={`R$ ${(cartItem.preco * cartItem.cartQtd).toFixed(2)}`}
-                    priceParcel={`10 vezes de R$ ${((cartItem.preco * cartItem.cartQtd) / 10).toFixed(2)}`} />
+                    priceParcel={`10 vezes de R$ ${((cartItem.preco * cartItem.cartQtd) / 10).toFixed(2)}`} 
+                  />
+
                   <Counter
                     qtd={cartItem.cartQtd}
                     onClickADD={() => handleAddItems(cartItem)}
-                    onClickREMOVE={() => handleDecreaseCart(cartItem)} />
+                    onClickREMOVE={() => handleDecreaseCart(cartItem)} 
+                  />
                 </>
 
               ))}
             </div>
+            
             <div className='cart-summary'>
               <Link to={'/cart'}>
                 <Button className='see-cart' addcart='Ver carrinho completo' />

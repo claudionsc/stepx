@@ -21,12 +21,14 @@ export const NavDiv = styled.div`
         svg{
             font-size: 3rem !important;
         }
-        
-        p{
-            /* font-size: 2rem !important; */
-            background-color: #0004ff;
+
+        a p{
+            font-size: 1.5rem;
+            height: 2rem;
+            width: 2rem;
         }
-    
+        
+       
         
         .none{
             display: none;
@@ -47,7 +49,7 @@ export const NavDiv = styled.div`
         li{
             margin: 5%;
             a{
-                font-size: 350%;
+                font-size: 2.5rem;
             }
         }
 
@@ -156,12 +158,28 @@ export const NALTStyle = styled.nav`
         @media screen and (min-width: 767px) and (max-width: 1023px){
             height: 5vh;
 
+
             p{
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             & svg{
-                font-size: 3rem;
+                font-size: 2rem;
+            }
+
+            .navcart{
+
+                svg{
+                    font-size: 3rem;
+                }
+                
+                a p{
+                    top: -20px;
+                    left: 60px;
+                    font-size: 1.5rem;
+                   width: 1.5rem;
+                   height: 2rem;
+                }
             }
         }
     

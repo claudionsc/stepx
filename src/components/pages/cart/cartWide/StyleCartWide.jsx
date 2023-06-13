@@ -31,6 +31,35 @@ export const CWStyle = styled.main`
             cursor: pointer;
         }
     }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        width: 90vw;
+        section{
+            height: 40% !important;
+
+            img{
+                width: 100%;
+            }
+
+            h6, p{
+                font-size: 1.2rem;
+            }
+
+            form{
+                width: 60%;
+
+                input, label{
+                    font-size: 1.5rem;
+                }
+            }
+
+            svg{
+                font-size: 2rem;
+            }
+
+        }
+
+    }
 `
 
 export const CartWideTitles = styled.span`
@@ -41,4 +70,11 @@ export const CartWideTitles = styled.span`
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+        width: 90vw;
+        font-size: 2.5rem;
+        text-align: center;
+
+    }
 `

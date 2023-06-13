@@ -5,8 +5,6 @@ export const MVStyled = styled.span`
     width: 20vw;
     object-fit: contain;
     
-    
-
     & img {
             aspect-ratio: 9/16;
             width: 20vw;
@@ -20,6 +18,5 @@ export const MVStyled = styled.span`
         margin: 15px 0;
 
     }
-
     
 `

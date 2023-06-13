@@ -53,7 +53,6 @@ export const CKTStyle = styled.section`
                 .inputs{
                     display: flex;
                     .opcao{
-
                         input{
                           accent-color: cadetblue;
                           border-color: cadetblue;
@@ -103,7 +102,40 @@ export const CKTStyle = styled.section`
                 p, h4{
                     margin: 10px 0;
                 }
-    
+
+        @media screen and (min-width: 767px) and (max-width: 1023px){
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            span form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                
+                .payment{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    input{
+                        width: 100%;
+                    }
+                }
+
+
+                button{
+                    width: 80%;
+                }
+            }
+
+            
+        }
+
 `
 
 export const CIStyled = styled.article`
@@ -136,12 +168,30 @@ export const CIStyled = styled.article`
 
     span{
         max-height: 15%;
-        width: 50%;
         right: 0;
         justify-content: space-around;
 
         button{
             display: none;
+        }
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px){
+
+        overflow-y: scroll;
+
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            img{
+                max-width: 30%;
+            }
+
+            h6, p{
+                font-size: 1.5rem;
+            }
         }
     }
 `

@@ -52,4 +52,16 @@ export const FCKStyle = styled.section`
                 }
              }
         }
+
+        @media screen and (min-width: 767px) and (max-width: 1023px){
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            top: 5%;
+
+            h6, p{
+                font-size: 1.5rem;
+            }
+        }
 `

@@ -47,7 +47,7 @@ export const Product = () => {
 
   return (
     
-    <PDStyle >
+    <main id='product-main'>
 
         <NavbarAlt onClickAlt={() => navigate(-1)}
           cart={
@@ -75,7 +75,7 @@ export const Product = () => {
                 return <button onClick={() => setSizeToCart(item)} className="tamanhos-btn" key={item} >{item}</button>
               })} />
 
-              <Button disabled={disabledButton} onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
+              <Button className='add-cart-btn' disabled={disabledButton} onClick={() => handleAddCart(product)} addcart={'Adicionar ao carrinho'} />
             </div>
 
 
@@ -83,6 +83,6 @@ export const Product = () => {
         </section>
 
         {cart === true && <CartAside />}
-    </PDStyle>
+    </main>
   )
 }
