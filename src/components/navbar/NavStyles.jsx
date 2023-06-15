@@ -84,7 +84,8 @@ export const NavLogo = styled.div`
 `
 
 export const NavCart = styled.div`
-    height: 40px;
+    height: 30px;
+    width: 40%;
     aspect-ratio: 4/1;
     text-align: center;
     display: flex;
@@ -100,11 +101,12 @@ export const NavCart = styled.div`
 
     p{
         height: auto;
-        position: relative;
-        right: -50%;
-        top: 10px;
+        position: absolute;
+        right: 4%;
+        top: 15%;
+        padding: 2px 5px;
         border-radius: 50%;
-        background-color: #ff0000;
+        background-color: red;
         color: white;
         font-size: .7rem;
         width: 16px;
@@ -157,6 +159,7 @@ export const NALTStyle = styled.nav`
         }       
 
         @media screen and (min-width: 767px) and (max-width: 1023px){
+
             height: 5vh;
 
 
@@ -171,15 +174,17 @@ export const NALTStyle = styled.nav`
             .navcart{
 
                 svg{
-                    font-size: 3rem;
+                    font-size: 3rem !important;
+                    margin-right: 10vw;
                 }
                 
                 a p{
+                    position: relative;
                     top: -20px;
-                    left: 60px;
+                    right: -70px;
                     font-size: 1.5rem;
-                   width: 1.5rem;
-                   height: 2rem;
+                    width: 2rem;
+                    height: 2rem;
                 }
             }
         }
