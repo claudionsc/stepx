@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavDiv = styled.div`
+export const NavDiv = styled.nav`
     background-color: white;
     width: 100vw;
     height: 8vh;
@@ -85,14 +85,13 @@ export const NavLogo = styled.div`
 
 export const NavCart = styled.div`
     height: 30px;
-    width: 40%;
+    width: 15%;
     aspect-ratio: 4/1;
     text-align: center;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
     cursor: pointer;
-    
   
 
     .hamb-menu{
@@ -102,9 +101,8 @@ export const NavCart = styled.div`
     p{
         height: auto;
         position: absolute;
-        right: 4%;
-        top: 15%;
-        padding: 2px 5px;
+        right: 6%;
+        top: 17%;
         border-radius: 50%;
         background-color: red;
         color: white;
@@ -144,6 +142,21 @@ export const NALTStyle = styled.nav`
             margin-left: 2%;
             cursor: pointer;
            
+        }
+
+        
+        & .navcart p{
+            height: auto;
+            position: absolute;
+            right: 4%;
+            top: 17%;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: .7rem;
+            width: 16px;
+            height: 16px;
+            text-decoration: none;
         }
         
         & p, svg {
