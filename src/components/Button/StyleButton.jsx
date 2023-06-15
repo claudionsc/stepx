@@ -7,10 +7,8 @@ export const BTNStyled = styled.button`
     height: 10%;
     border: none;
     border-radius: 117px 117px 117px 117px;
-    
-
     &:hover {
-        cursor: pointer;
-        background-color: #000000c0;
-    }
+          background-color: #000000c0;
+          cursor: pointer;
+      }
 `

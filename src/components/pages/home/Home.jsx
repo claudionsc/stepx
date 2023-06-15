@@ -71,8 +71,8 @@ export const Home = () => {
         <HomeFilters />
         <article className='products-items'>
 
-          
-          
+
+
           {List.map(item => {
 
             let hasSizes = item.tamanhos.includes(size)
@@ -113,7 +113,7 @@ export const Home = () => {
       {warning === true &&
         <Warning>
           <div className='close'>
-            <AiFillCloseCircle  onClick={() => setWarning(false)} />
+            <AiFillCloseCircle onClick={() => setWarning(false)} />
           </div>
         </Warning>
       }

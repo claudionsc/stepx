@@ -16,66 +16,55 @@ export const WStyle = styled.footer`
     text-align: center;
     animation: animation 10s normal ease-in-out;
     padding: 0 20px;
-  
-
     h4, p{
-        font-size: .7rem;
-
-        color: purple;
-    }
-
+          color: purple;
+          font-size: .7rem;
+      }
     .contatos{
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-        justify-content: center;
-        
-        svg{
-            margin: 0 20px;
-            fill: purple;
-        }
-    }
-    .close{
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 1%;
-        cursor: pointer;
-    }
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+          width: 100%;
 
+        svg{
+              fill: purple;
+              margin: 0 20px;
+          }
+      }
+    .close{
+          cursor: pointer;
+          padding: 1%;
+          position: absolute;
+          right: 0;
+          top: 0;
+      }
     @keyframes animation {
         0% {
-            display: none;
-            opacity: 0;
-        }
-
+              display: none;
+              opacity: 0;
+          }
         25%{
-            display: inline-block;
-            opacity: 100%;
-        }
-
+              display: inline-block;
+              opacity: 100%;
+          }
         100%{
-            display: inline-block;
-            opacity: 100%;
-        }
-    }
-
+              display: inline-block;
+              opacity: 100%;
+          }
+      }
     @media screen and (min-width: 767px) and (max-width: 1023px){
-        height: 10vh;
-        width: 90vw;
+          height: 10vh;
+          width: 90vw;
 
         h4{
-            font-size: 2rem;
-        }
-
+              font-size: 2rem;
+          }
         p{
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
+              font-size: 1.2rem;
+              margin-bottom: 5px;
+          }
         svg{
-            font-size: 1.5rem;
-        }
-       
-    }
+              font-size: 1.5rem;
+          }
+      }
 `

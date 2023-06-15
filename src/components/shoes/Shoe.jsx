@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/test.css'
 import {ContactShadows } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Sneaker } from './shoes3d/sneaker'

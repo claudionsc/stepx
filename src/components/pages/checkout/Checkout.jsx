@@ -133,8 +133,6 @@ export const Checkout = () => {
         <section>
           <CIStyled>
 
-
-
             <h3>Resumo dos pedidos</h3>
             {checkoutItems.map((item) => (
 
@@ -150,8 +148,8 @@ export const Checkout = () => {
                 priceAmount={`R$ ${(item.preco * item.cartQtd).toFixed(2)}`}
               />
             ))}
-            <CartSubTotal subtotal={`R$ ${checkoutSubtotal.toFixed(2)}`} />
           </CIStyled>
+            <CartSubTotal subtotal={`R$ ${checkoutSubtotal.toFixed(2)}`} />
         </section>
 
       </CKTStyle>

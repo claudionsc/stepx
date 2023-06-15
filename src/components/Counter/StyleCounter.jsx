@@ -9,17 +9,14 @@ align-items: center;
 border-radius: 5px;
 margin-left: 5%;
 border: 1px solid black;
-
  & input{
-    width: 33%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
- }
-
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      height: 100%;
+      width: 33%;
+     }
  & label{
-    font-size: .8rem;
- }
-    
+      font-size: .8rem;
+     }    
 `

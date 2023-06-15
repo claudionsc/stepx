@@ -4,7 +4,7 @@ import { AiFillGithub } from 'react-icons/ai'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { AiOutlineMail } from 'react-icons/ai'
 
-export const Warning = ({children}) => {
+export const Warning = ({ children }) => {
   return (
     <WStyle>
       <span>

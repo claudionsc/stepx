@@ -6,82 +6,61 @@ export const HFStyle = styled.aside`
     position: sticky;
     top: 10%;
     left: 0;
-
-
-
     h6{
-        margin: 10px;
-        cursor: pointer;
-    }
-    
-   
+          cursor: pointer;
+          margin: 10px;
+      }   
     & p{
-        padding: 10px;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        width: 90%;
-    }
-
+          border-bottom: 1px solid black;
+          border-top: 1px solid black;
+          padding: 10px;
+          width: 90%;
+      }
     & form{
-        width: 70%;
-        margin: 5% auto;
-
-    }
+          margin: 5% auto;
+          width: 70%;
+      }
     & #preco {
-
         .opcao{
-        }
-
+      }
         input{
-            scale: 150%;
-            margin: 10px 10px 0 10px;
-            accent-color: white;
-
-        }
-
-
-        
-    }
-
-    
+              accent-color: white;
+              margin: 10px 10px 0 10px;
+              scale: 150%;
+          }
+        }    
     svg{
-        display: none;
-    }
-
+          display: none;
+      }
     @media screen and (min-width: 767px) and (max-width: 1023px){
-        background: rgba(255, 255, 255, 0.48);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9.3px);
-        -webkit-backdrop-filter: blur(9.3px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        position: fixed;
-        height: 100vh;
-        width: 50%;
-        bottom: 0;
+          -webkit-backdrop-filter: blur(9.3px);
+          backdrop-filter: blur(9.3px);
+          background: rgba(255, 255, 255, 0.48);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          bottom: 0;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          height: 100vh;
+          position: fixed;
+          width: 50%;
 
         p{
-            font-size: 1.8rem;
-        }
-
+              font-size: 1.8rem;
+          }
         h6{
-            font-size: 1.5rem;
-        }
-        
+              font-size: 1.5rem;
+          }
         button{
-            font-size: 1.5rem;
-        }
-
+              font-size: 1.5rem;
+          }
         label{
-            font-size: 1.5rem;
-        }
-
+              font-size: 1.5rem;
+          }
         svg{
-            display: inline;
-            font-size: 2.5rem;
-            position: absolute;
-            right: 0%;
-            margin: 5px;
-        }
-        
-    }
+              display: inline;
+              font-size: 2.5rem;
+              margin: 5px;
+              position: absolute;
+              right: 0%;
+          }
+      }
 `

@@ -6,23 +6,20 @@ export const PHStyled = styled.span`
     display: flex;
     flex-direction: column;
     margin-top: 10%;
-
     & img{
-        width: 20vw;
-        object-fit: contain;
-        aspect-ratio: 9/16;
-        height: 40vh;
-
-    }
-
+          aspect-ratio: 9/16;
+          height: 40vh;
+          object-fit: contain;
+          width: 20vw;
+      }
     & .desc-product-home{
-        height: 25%;
-        margin-top: 50%;
+          height: 25%;
+          margin-top: 50%;
 
         & button {
-            height: 30%;
-            margin-top: 10px;
-            font-size: .7rem;
-        }
-    }
+              font-size: .7rem;
+              height: 30%;
+              margin-top: 10px;
+          }
+      }
 `
