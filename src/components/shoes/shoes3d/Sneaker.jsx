@@ -16,12 +16,16 @@ export function Sneaker(props) {
   const ref = useRef()
   const { nodes, materials } = useGLTF('/stepx/sneaker-transformed.glb')
 
-  let scale = 0.03
   
+  let scale = 0.03
   useFrame((state) => {
     if(window.screen.width <= 767){
       scale = 0.01
+      
+    }else{
+      scale = 0.03
     }
+    
 
     const t = state.clock.getElapsedTime()
 

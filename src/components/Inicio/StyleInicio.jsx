@@ -72,6 +72,13 @@ export const S3DStyle = styled.div`
             position: absolute;
             top: 0%;
             width: 100%;
+
+            & .shoe{
+            width: 90vw;
+            height: 90vh;
+           
+
+            }
         }
     @media screen and (min-width: 767px) and (max-width: 1023px){
         .home-title{
@@ -81,14 +88,17 @@ export const S3DStyle = styled.div`
               z-index: 1;
           }
         #shoes1{
-              height: 50vh;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
+              height: 100vh;
+              
               width: 100vw;
+              
 
             .shoe{
-                            }
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0%;
+                }
           }
-                    }   
+        }   
 `
