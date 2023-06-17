@@ -96,8 +96,7 @@ export const S3DStyle = styled.div`
             .shoe{
                 width: 100vw;
                 height: 100vh;
-                position: fixed;
-                top: 0%;
+                
                 }
           }
         }   
