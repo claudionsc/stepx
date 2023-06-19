@@ -24,7 +24,6 @@ export const CSTStyle = styled.footer`
 
         button{
             width: 30vw;
-
             font-size: 2rem;
         }
     }

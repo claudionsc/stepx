@@ -117,13 +117,13 @@ export const Checkout = () => {
             </div>
 
             <h4>Dados do cliente</h4>
-            <input type="text" placeholder='Email' name="email" required onChange={(e) => handleEmailSubmit(e)} />
-            <input type="text" placeholder='Nome' name="nome" required onChange={(e) => handleNameSubmit(e)} />
-            <input type="text" placeholder='Telefone' name="telefone" required onChange={(e) => handlePhoneSubmit(e)} />
-            <input type="text" placeholder='CPF' name="cpf" required onChange={(e) => handleCPFSubmit(e)} />
-            <input type="text" placeholder='Endereço' name="endereco" required onChange={(e) => handleAddressSubmit(e)} />
-            <input type="text" placeholder='Cidade' name="cidade" required onChange={(e) => handleCitySubmit(e)} />
-            <input type="text" placeholder='País' name="pais" required onChange={(e) => handleCountrySubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='Email' name="email" required onChange={(e) => handleEmailSubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='Nome' name="nome" required onChange={(e) => handleNameSubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='Telefone' name="telefone" required onChange={(e) => handlePhoneSubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='CPF' name="cpf" required onChange={(e) => handleCPFSubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='Endereço' name="endereco" required onChange={(e) => handleAddressSubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='Cidade' name="cidade" required onChange={(e) => handleCitySubmit(e)} />
+            <input className='dados-clientes' type="text" placeholder='País' name="pais" required onChange={(e) => handleCountrySubmit(e)} />
 
             <Button disabled={disabledButton} addcart={"Finalizar compra"} type={"submit"} />
           </form>

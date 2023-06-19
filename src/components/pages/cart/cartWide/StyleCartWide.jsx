@@ -9,6 +9,18 @@ export const CWStyle = styled.main`
     justify-content: center;
     margin: 0 auto;
 
+    .cart-wide{
+            height: 70vh;
+            overflow-y: scroll;
+
+            span{
+                background-color: #c1c1c1;
+                position: fixed;
+                top: 10%;
+                width: 70vw;
+            }
+        }
+
    
 
     & section {
@@ -34,8 +46,22 @@ export const CWStyle = styled.main`
 
     @media screen and (min-width: 767px) and (max-width: 1023px){
         width: 90vw;
+
+        .cart-wide{
+            height: 70vh;
+            overflow-y: scroll;
+
+            span{
+                font-size: 1.8rem;
+                position: fixed;
+                top: 10%;
+                p{
+                    margin: 0 1%;
+                }
+            }
+        }
         section{
-            height: 40% !important;
+            height: 10% !important;
 
             img{
                 width: 100%;
@@ -63,10 +89,10 @@ export const CWStyle = styled.main`
 `
 
 export const CartWideTitles = styled.span`
-    width: 100%;
+    width: 70%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;

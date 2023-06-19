@@ -9,9 +9,17 @@ import { Link } from 'react-router-dom'
 import { CartWideTitles } from './StyleCartWide'
 import { CartSubTotal } from '../cartSubToltal/CartSubTotal'
 import { NavbarAlt } from '../../../navbar/NavbarAlt'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 export const CartWide = () => {
+
+  const routePath = useLocation();
+  const onTop = () => {
+    window.scrollTo(0, 0);
+  }
+  useEffect(() => {
+    onTop()
+  }, [routePath]);
 
   const cartI = useSelector((state) => state.item.cartItems)
   const cartItems = useSelector((state) => state.item)
@@ -56,7 +64,7 @@ export const CartWide = () => {
         </div>
       ) : (
         <>
-          <div>
+          <div className='cart-wide'>
                 <CartWideTitles>
                   <p>Produto</p>
                   <p>Quantidade</p>

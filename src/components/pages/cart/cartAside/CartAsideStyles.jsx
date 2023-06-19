@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const CartAsideContainer = styled.aside`
-    height: 100vh;
+    height: 92vh;
     width: 20vw;
     position: fixed;
-    top: 0;
+    top: 8vh;
     right: 0;
     z-index: 1;
-
+    overflow-y: scroll;
     .open-wide-cart{
         position: fixed;
         width: 2vw;
@@ -98,8 +98,10 @@ export const CartAsideContainer = styled.aside`
     }
 
     @media screen and (min-width: 767px) and (max-width: 1023px){
-        width: 60vw;
-
+        width: 70vw;
+        height: 92vh;
+        position: fixed;
+        top: 8vh;
         & svg{
             font-size: 4rem;
         }
@@ -137,7 +139,6 @@ export const StyleCartAsideItems =  styled.div`
     margin: 10px 0;
     display: flex;
     align-items: center;
-    padding: 0 10px;
     z-index: 1;
 
     & img {

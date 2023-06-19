@@ -12,7 +12,6 @@ export const CKTStyle = styled.section`
           }
       }
     span{
-              background-color: #f0efef;
               display: grid;
               height: 100vh;
               place-items: center;
@@ -103,38 +102,66 @@ export const CKTStyle = styled.section`
                           position: fixed;
                           width: 30%;
 
-                   
                       }
         @media screen and (min-width: 767px) and (max-width: 1023px){
                     align-items: center;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: column-reverse;
                     justify-content: center;
+                    height: auto !important;
 
-            span form{
+                    h4, p{
+                        font-size: 2rem;
+                    }
+                    
+                    section{
+                        max-height: 50vh;
+                    }
+
+                  
+
+                    span form{
                       align-items: center;
                       display: flex;
                       flex-direction: column;
-                      justify-content: center;
+
 
                 .payment{
                           display: flex;
                           flex-direction: column;
-                          height: 100%;
-                          justify-content: center;
+                          width: 90%;
+                            height: 15%;
 
-                    input{
-                              width: 100%;
-                          }
                       }
+
+                      .opcao input{
+                        height: 30px;
+
+                       
+                      }
+
+                      .opcao  label{
+                            text-align: center;
+                        }
+
                 button{
-                          width: 80%;
+                          width: 50%;
+                          height: 5vh;
                       }
+                  }
+
+                  .dados-clientes{
+                    min-width: 90%;
+                    min-height: 4vh;
+                    margin: 20px 0;
+                    font-size: 2rem;
+                    border-radius: 5px;
                   }
 
                   footer{
                           
                           width: 90%;
+                          height: 8vh;
 
                    
                       }
@@ -158,6 +185,8 @@ export const CIStyled = styled.article`
 
         img{
                   max-width: 5vw;
+                  aspect-ratio: 1/1;
+                  object-fit: contain;
               }
         h6 {
                   font-size: .8rem;
@@ -177,14 +206,14 @@ export const CIStyled = styled.article`
           }
     @media screen and (min-width: 767px) and (max-width: 1023px){
                 overflow-y: scroll;
+                margin-top: 8vh;
 
         section{
                   display: flex;
                   flex-direction: row;
-                  justify-content: space-around;
 
             img{
-                      max-width: 30%;
+                      max-width: 20%;
                   }
             h6, p{
                       font-size: 1.5rem;

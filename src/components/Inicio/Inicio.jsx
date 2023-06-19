@@ -15,7 +15,7 @@ const Inicio = () => {
       </div>
       
       <div id="shoes1" >
-        <Shoe  />
+        {/* <Shoe  /> */}
       </div>
     </S3DStyle>
   )
