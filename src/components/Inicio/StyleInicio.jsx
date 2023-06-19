@@ -5,24 +5,24 @@ export const S3DStyle = styled.div`
     justify-content: center;
     align-items: center;
     .home-title{
-          animation: fadeIn 1s normal linear;
           display: grid;
           font-size: 6rem;
-          height: 80vh;
+          height: 65vh;
           left: 0;
           margin-left: 2%;
-          overflow-wrap: break-word;
-          place-items: center;
           position: absolute;
-          top: 50%;
-          transform: translate(0%, -50%);
-          width: 20vw;
+          top: 60%;
+          transform: translate(0%, -60%);
+          width: 35vw;
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(7.3px);
+          -webkit-backdrop-filter: blur(7.3px);
+          padding: 5%;
 
         h1{
-              text-align: left;
-              word-break: break-all;
-          }
-        h1, h6{
+              
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
               animation: gradientAnimation 10s infinite linear;
@@ -30,6 +30,11 @@ export const S3DStyle = styled.div`
               background-image: -webkit-linear-gradient(202deg, rgba(6,0,109,1) 0%, rgba(9,9,121,1) 24%, rgba(244,0,255,1) 53%, rgba(0,212,255,1) 97%);
               background-size: 200% 200%;
               color: black;
+              text-align: left;
+          }
+
+          p{
+            font-size: 5rem;
           }
         @keyframes fadeIn {
             0%{
@@ -82,10 +87,12 @@ export const S3DStyle = styled.div`
         }
     @media screen and (min-width: 767px) and (max-width: 1023px){
         .home-title{
-              height: 20vh;
+              height: 30vh;
               position: absolute;
-              width: 100vw;
+              width: 80vw;
               z-index: 1;
+              margin-left: 0;
+              margin: 0 5%;
           }
         #shoes1{
               height: 100vh;

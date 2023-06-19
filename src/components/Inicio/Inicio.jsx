@@ -11,11 +11,13 @@ const Inicio = () => {
     <S3DStyle >
       <div className="home-title">
         <h1>STEPX</h1>
-        <h6>MOVE ON</h6>
+        <p>xpect</p>
+        <p>xperience</p>
+        <p>xperiment</p>
       </div>
       
       <div id="shoes1" >
-        {/* <Shoe  /> */}
+        <Shoe  />
       </div>
     </S3DStyle>
   )
