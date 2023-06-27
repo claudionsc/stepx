@@ -11,9 +11,13 @@ const Inicio = () => {
     <S3DStyle >
       <div className="home-title">
         <h1>STEPX</h1>
-        <p>xpect</p>
-        <p>xperience</p>
-        <p>xperiment</p>
+        <h1>STEPX</h1>
+        <h1>STEPX</h1>
+      </div>
+      <div className="home-title-hover">
+        <h1>STEPX</h1>
+        <h1>STEPX</h1>
+        <h1>STEPX</h1>
       </div>
       
       <div id="shoes1" >

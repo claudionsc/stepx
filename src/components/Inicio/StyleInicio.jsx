@@ -8,18 +8,14 @@ export const S3DStyle = styled.div`
           display: grid;
           font-size: 6rem;
           height: 65vh;
-          left: 0;
+          left: 50%;
           margin-left: 2%;
           position: absolute;
           top: 60%;
-          transform: translate(0%, -60%);
+          transform: translate(-50%, -60%);
           width: 35vw;
-          background: rgba(255, 255, 255, 0.03);
-          border-radius: 16px;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(7.3px);
-          -webkit-backdrop-filter: blur(7.3px);
           padding: 5%;
+      
 
         h1{
               
@@ -32,7 +28,29 @@ export const S3DStyle = styled.div`
               color: black;
               text-align: left;
           }
+        }
+    .home-title-hover{
+          display: grid;
+          font-size: 6rem;
+          height: 65vh;
+          left: 50%;
+          margin-left: 2%;
+          position: absolute;
+          top: 60%;
+          transform: translate(-50%, -60%);
+          width: 35vw;
+          padding: 5%;
+          z-index: 1;
+      
 
+        h1{
+            text-align: left;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            color: black;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #ffffff;
+        }
           p{
             font-size: 5rem;
           }
@@ -86,19 +104,25 @@ export const S3DStyle = styled.div`
             }
         }
     @media screen and (min-width: 767px) and (max-width: 1023px){
-        .home-title{
+        .home-title, .home-title-hover{
               height: 30vh;
               position: absolute;
               width: 80vw;
-              z-index: 1;
               margin-left: 0;
-              margin: 0 5%;
+              text-align: center;
+              font-size: 9rem;
+
+              h1{
+                text-align: center;
+              }
+          }
+
+          .home-title-hover{
+            z-index: 1;
           }
         #shoes1{
               height: 100vh;
-              
               width: 100vw;
-              
 
             .shoe{
                 width: 100vw;

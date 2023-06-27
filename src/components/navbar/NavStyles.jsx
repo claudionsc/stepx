@@ -16,11 +16,16 @@ export const NavDiv = styled.nav`
     @media screen and (min-width: 767px) and (max-width: 1023px){
         svg{
               font-size: 3rem !important;
+              
           }
         a p{
               font-size: 1.5rem;
               height: 2rem;
               width: 2rem;
+              position: relative;
+          right: -60%;
+          text-decoration: none;
+          top: 20px;
           }
         .none{
               display: none;
@@ -48,6 +53,7 @@ export const NavDiv = styled.nav`
       }
         div .hamb-menu{
               display: inline-block;
+              margin: 0 30%;
           }
         }    
 `
@@ -136,6 +142,7 @@ export const NALTStyle = styled.nav`
           }
         @media screen and (min-width: 767px) and (max-width: 1023px){
                 height: 5vh;
+                
 
             p{
                   font-size: 2rem;
